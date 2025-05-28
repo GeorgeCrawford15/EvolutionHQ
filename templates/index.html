@@ -15,7 +15,7 @@
 
         <table class="matrix-table">
             <thead>
-                <tr>
+                <tr id="top-row">
                     <th>Character</th>
                     <th>Character State</th>
                     <th><input type="text" class="species-name" placeholder="Species 1"></th>
@@ -38,9 +38,15 @@
             </tbody>
         </table>
 
-        <div class="buttons">
-            <button id="add-column">Add more columns</button>
-            <button id="add-row">Add more rows</button>
+        <div class="buttons-and-status">
+            <div class="buttons">
+                <button id="add-column" onclick="addColumn()">Add columns</button>
+                <button id="add-row">Add rows</button>
+                <button id="remove-column">Remove columns</button>
+                <button id="remove-row">Remove rows</button>
+            </div>
+
+            <p class="status-message"></p>
         </div>
 
         <div class="results">
