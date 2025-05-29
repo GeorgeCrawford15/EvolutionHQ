@@ -18,15 +18,15 @@
                 <tr id="top-row">
                     <th>Character</th>
                     <th>Character State</th>
-                    <th><input type="text" class="species-name" placeholder="Species 1"></th>
-                    <th><input type="text" class="species-name" placeholder="Species 2"></th>
-                    <th><input type="text" class="species-name" placeholder="Species 3"></th>
-                    <th><input type="text" class="species-name" placeholder="Species 4"></th>
-                    <th><input type="text" class="species-name" placeholder="Species 5"></th>
+                    <th class="col1"><input type="text" class="species-name" placeholder="Species 1"></th>
+                    <th class="col2"><input type="text" class="species-name" placeholder="Species 2"></th>
+                    <th class="col3"><input type="text" class="species-name" placeholder="Species 3"></th>
+                    <th class="col4"><input type="text" class="species-name" placeholder="Species 4"></th>
+                    <th class="col5"><input type="text" class="species-name" placeholder="Species 5"></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="row1">
                     <td><input type="text" class="character"></td>
                     <td><input type="text" class="state"></td>
                     <td><input type="number" class="binary" min="0" max="1"></td>
@@ -41,9 +41,9 @@
         <div class="buttons-and-status">
             <div class="buttons">
                 <button id="add-column" onclick="addColumn()">Add columns</button>
-                <button id="add-row">Add rows</button>
-                <button id="remove-column">Remove columns</button>
-                <button id="remove-row">Remove rows</button>
+                <button id="add-row" onclick="addRow()">Add rows</button>
+                <button id="remove-column" onclick="removeColumn()">Remove columns</button>
+                <button id="remove-row" onclick="removeRow()">Remove rows</button>
             </div>
 
             <p class="status-message"></p>
