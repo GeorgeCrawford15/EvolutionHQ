@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biology Matrix Table</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
         <div class="reference-species">
-            <label for="reference">Reference Species Number:</label>
-            <input type="number" id="reference" min="1" max="5">
+            <div class="label-input-container">
+                <label for="reference">Reference Species Name:</label>
+                <input type="text" id="reference">
+            </div>
+            <button onclick="compareColumns()">Evaluate Differences</button>
         </div>
 
         <table class="matrix-table">
@@ -55,6 +58,7 @@
         </div>
     </div>
 
-    <script src="/static/script.js"></script>
+    <script src="/format.js"></script>
+    <script src="/evaluate.js"></script>
 </body>
 </html>
