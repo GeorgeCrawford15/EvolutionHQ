@@ -5,7 +5,12 @@
 }
 
 body {
-    background-color: #f5f7fa;
+    /*background-color: #f5f7fa;*/
+    background: linear-gradient(
+        90deg,
+        rgb(203, 248, 239),
+        rgb(72, 134, 204)
+    );
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     overflow-x: auto;  /* Move scroll to body level */
     padding: 0 1rem;  /* Add some padding to prevent container from touching edges */
@@ -185,6 +190,20 @@ button:hover {
     background: white;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.results-content p {
+    font-size: 20px;
+}
+
+.results-content ul {
+    list-style: none;
+    font-size: 19px;
+}
+
+.results-content li {
+    padding: 5px 0;
 }
 
 /* Hover effects */
@@ -194,4 +213,25 @@ button:hover {
 
 .matrix-table td:hover {
     background-color: #f1f5f9;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.title-section h1 {
+    color: #334155;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.title-section p {
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 400;
 }

@@ -41,6 +41,10 @@ function compareColumns() {
         statusMessage.style.visibility = 'visible';
         statusMessage.innerText = "Please provide a species to compare the others against.";
         return;
+    } else if (!speciesNames.some(species => species === referenceSpecies)) {
+        statusMessage.style.visibility = 'visible';
+        statusMessage.innerText = "The reference species must be one of species names you entered.";
+        return;
     } else {
         statusMessage.style.visibility = 'hidden';
     }
@@ -54,7 +58,28 @@ function compareColumns() {
         }
     }
 
-    for (const species in columnData) {
-        console.log(species);
+    const modifiedSpeciesNames = speciesNames.filter(name => name !== referenceSpecies);
+
+    const selectedColumn = columnData[referenceSpecies];
+    delete columnData[referenceSpecies];
+
+    let columnDifferences = {};
+    for (const name of modifiedSpeciesNames) {
+        columnDifferences[name + "DiffCounter"] = 0;
+    }
+
+    document.querySelectorAll('.results-content li').forEach(li => li.remove());
+    document.querySelector('.results-content p').innerText = "Number of differences between " + referenceSpecies + " and...";
+    document.querySelector('.results-content').style.backgroundColor = '';
+
+    for (const name of modifiedSpeciesNames) {
+        for (let i = 0; i < columnData[name].length; i++) {
+            if (selectedColumn[i] !== columnData[name][i]) {
+                columnDifferences[name + "DiffCounter"]++;
+            }
+        }
+        const speciesDiffCount = document.createElement('li');
+        speciesDiffCount.innerText = name + ": " + columnDifferences[name + "DiffCounter"];
+        document.querySelector('.results-content ul').appendChild(speciesDiffCount);
     }
 }
