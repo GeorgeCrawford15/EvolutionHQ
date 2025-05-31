@@ -6,8 +6,8 @@
 
 body {
     /*background-color: #f5f7fa;*/
-    background: linear-gradient(
-        90deg,
+    background: radial-gradient(
+        circle 1000px,
         rgb(203, 248, 239),
         rgb(72, 134, 204)
     );
