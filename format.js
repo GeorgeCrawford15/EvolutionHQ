@@ -47,7 +47,7 @@ function removeRow() {
 let speciesCount = 5;
 function addColumn() {
     document.querySelector('.status-message').style.visibility = 'hidden';
-    if (speciesCount < 10) {
+    if (speciesCount < 14) {
         speciesCount++;
         const topRow = document.getElementById('top-row');
         const newNameBox = document.createElement('th');
@@ -72,7 +72,7 @@ function addColumn() {
         }
     } else {
         document.querySelector('.status-message').style.visibility = 'visible';
-        document.querySelector('.status-message').innerText = "No more species can be added. Maximum number of species is 10.";
+        document.querySelector('.status-message').innerText = "No more species can be added. Maximum number of species is 14.";
         document.querySelector('.status-message').style.color = 'red';
     }
 }

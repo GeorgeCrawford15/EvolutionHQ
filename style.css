@@ -68,8 +68,10 @@ body {
 .matrix-table th,
 .matrix-table td {
     border: 1px solid #e2e8f0;
-    padding: 12px;
+    padding: 8px;
     text-align: center;
+    min-width: 40px;
+    max-width: none;
 }
 
 .matrix-table th {
@@ -95,27 +97,28 @@ body {
 }
 
 .matrix-table input.binary {
-    min-width: 60px;
-    max-width: 80px;
-    width: 100%;
+    min-width: 40px;
+    max-width: none;
+    width: calc(100% - 10px);
     text-align: center;
     font-weight: 500;
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .matrix-table input.species-name {
-    min-width: 120px;
-    max-width: 150px;
-    width: 100%;
+    min-width: 80px;
+    max-width: none;
+    width: calc(100% - 10px);
     font-weight: 1000;
+    font-size: clamp(12px, 1.2vw, 16px);
 }
 
 .matrix-table input.character,
 .matrix-table input.state {
-    min-width: 100px;
-    max-width: 200px;
-    width: 100%;
-    font-size: 16px;
+    min-width: 80px;
+    max-width: none;
+    width: calc(100% - 10px);
+    font-size: clamp(14px, 1.2vw, 16px);
 }
 
 .buttons-and-status {
@@ -234,4 +237,33 @@ button:hover {
     color: #64748b;
     font-size: 1.1rem;
     font-weight: 400;
+}
+
+.credit {
+    background-color: rgb(236, 236, 236);
+    width: fit-content;
+    font-size: 1.5rem;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.credit .links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.credit a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.credit a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
 }
