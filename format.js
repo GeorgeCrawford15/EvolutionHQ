@@ -1,3 +1,4 @@
+// Table formatting functions
 let rowCount = 1;
 function addRow() {
     rowCount++;
@@ -93,3 +94,63 @@ function removeColumn() {
         document.querySelector('.status-message').style.color = 'red';
     }
 }
+
+
+// Arrow keys and WASD functionality
+document.addEventListener('keydown', (event) => {
+    let inputs = Array.from(document.querySelectorAll('input'));
+    inputs.shift();
+    inputs = inputs.filter(input => input.className !== 'species-name');
+
+    const currentFocusedInput = document.activeElement;
+    if (!inputs.includes(currentFocusedInput)) {
+        return;
+    }
+
+    const numColumns = speciesCount + 2;
+
+    const currentIndex = inputs.indexOf(currentFocusedInput);
+    let targetIndex = -1;
+
+    switch (event.key) {
+        case 'ArrowUp':
+        case 'w':
+        case 'W':
+            targetIndex = currentIndex - numColumns;
+            break;
+        case 'ArrowDown':
+        case 's':
+        case 'S':
+            targetIndex = currentIndex + numColumns;
+            break;
+        case 'ArrowLeft':
+        case 'a':
+        case 'A': 
+            if (currentIndex % numColumns !== 0) {
+                targetIndex = currentIndex - 1;
+            }
+            break;
+        case 'ArrowRight':
+        case 'd':
+        case 'D':
+            if ((currentIndex + 1) % numColumns !== 0) {
+                targetIndex = currentIndex + 1;
+            }
+            break; 
+        case 'Enter':
+            targetIndex = currentIndex + 1;
+            break;
+        default:
+            return;
+    }
+
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+        event.preventDefault();
+    }
+
+    if (targetIndex >= 0 && targetIndex < inputs.length) {
+        inputs[targetIndex].focus();
+    } else if (event.key === 'Enter' && targetIndex >= inputs.length) {
+        inputs[0].focus();
+    }
+});
