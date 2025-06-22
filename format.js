@@ -96,7 +96,7 @@ function removeColumn() {
 }
 
 
-// Arrow keys and WASD functionality
+// Arrow keys functionality
 document.addEventListener('keydown', (event) => {
     let inputs = Array.from(document.querySelectorAll('input'));
     inputs.shift();
@@ -114,25 +114,17 @@ document.addEventListener('keydown', (event) => {
 
     switch (event.key) {
         case 'ArrowUp':
-        case 'w':
-        case 'W':
             targetIndex = currentIndex - numColumns;
             break;
         case 'ArrowDown':
-        case 's':
-        case 'S':
             targetIndex = currentIndex + numColumns;
             break;
         case 'ArrowLeft':
-        case 'a':
-        case 'A': 
             if (currentIndex % numColumns !== 0) {
                 targetIndex = currentIndex - 1;
             }
             break;
         case 'ArrowRight':
-        case 'd':
-        case 'D':
             if ((currentIndex + 1) % numColumns !== 0) {
                 targetIndex = currentIndex + 1;
             }
