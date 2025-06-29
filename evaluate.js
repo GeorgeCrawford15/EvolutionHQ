@@ -17,7 +17,7 @@ function compareColumns() {
     const binaries = document.querySelectorAll('.binary');
     const binaryArr = Array.from(binaries).map(input => input.value);
     const areEmptyBinaries = binaryArr.some(binary => binary === "");
-    const areNonBinaries = binaryArr.some(binary => binary !== "1" && binary !== "0");
+    const areNonBinaries = binaryArr.some(binary => binary !== "1" && binary !== "0" && binary !== "");
     const referenceSpecies = document.getElementById('reference').value;
 
     if (speciesNames.some(species => species === "")) {
@@ -28,10 +28,6 @@ function compareColumns() {
     } else if (hasDuplicates(speciesNames)) {
         statusMessage.style.visibility = 'visible';
         statusMessage.innerText = "Species names must be unique.";
-        return;
-    } else if (areEmptyBinaries) {
-        statusMessage.style.visibility = 'visible';
-        statusMessage.innerText = "One or more binary values are missing. Please enter all necessary binary values.";
         return;
     } else if (areNonBinaries) {
         statusMessage.style.visibility = 'visible';
@@ -48,6 +44,12 @@ function compareColumns() {
     } else {
         statusMessage.style.visibility = 'hidden';
     }
+
+    binaries.forEach(binary => {
+        if (binary.value === "") {
+            binary.value = 0;
+        }
+    });
 
     const rowCount = document.querySelectorAll('tr').length - 1;
     for (let col = 1; col <= columnCount; col++) {
