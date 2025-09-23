@@ -267,3 +267,16 @@ button:hover {
     color: #3b82f6;
     text-decoration: underline;
 }
+
+#tree-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
