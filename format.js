@@ -100,6 +100,7 @@ function removeColumn() {
 document.addEventListener('keydown', (event) => {
     let inputs = Array.from(document.querySelectorAll('input'));
     inputs.shift();
+    inputs.shift();
     inputs = inputs.filter(input => input.className !== 'species-name');
 
     const currentFocusedInput = document.activeElement;
