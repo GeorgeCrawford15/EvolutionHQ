@@ -35,17 +35,22 @@ body {
     justify-content: space-between;
 }
 
-.reference-species label {
+.label-input-container label {
     margin-right: 1rem;
     font-weight: 500;
     color: #2c3e50;
 }
 
-.reference-species input {
+.label-input-container input {
     padding: 8px;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     width: 100px;
+}
+
+#csv-upload {
+    border: none;
+    width: 200px;
 }
 
 .reference-species button {
@@ -268,15 +273,44 @@ button:hover {
     text-decoration: underline;
 }
 
-#tree-container {
+.tree-results {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-height: 300px;
     margin-top: 2rem;
     margin-bottom: 2rem;
     background: #f8fafc;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tree-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    background: #eff1f6;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.save-tree {
+    margin: 20px;
+    visibility: hidden;
+}
+
+.save-tree-wrapper {
+    background: #eff1f6;
+    padding: 1px;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    visibility: hidden;
 }

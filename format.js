@@ -146,3 +146,38 @@ document.addEventListener('keydown', (event) => {
         inputs[0].focus();
     }
 });
+
+document.getElementById('csv-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    Papa.parse(file, {
+        complete: function(results) {
+            console.log(results.data);
+            populateMatrix(results.data);
+        }
+    });
+});
+
+function populateMatrix(data) {
+    const dataRows = document.querySelectorAll('[class*="row"]');
+    dataRows.forEach(el => el.remove());
+
+    const speciesNames = Array.from(document.getElementById('top-row').children);
+    console.log(speciesNames);
+    speciesCount = speciesNames.length - 4;
+    data.forEach((row, rowIndex) => {
+        console.log(row, rowIndex);
+        row.forEach((cell, cellIndex) => {
+            if (rowIndex === 0 && cellIndex !== 0 && cellIndex !== 1) {
+                for (let i = 2; i < speciesNames.length; i++) {
+                    const th = speciesNames[cellIndex];
+                    th.innerText = cell;
+                }
+            } else {
+                addRow();
+            }
+        });
+    });
+    speciesNames.forEach(name => {
+        if (name.innerText === '') name.remove();
+    });
+}

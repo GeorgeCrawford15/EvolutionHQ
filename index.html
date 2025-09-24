@@ -27,6 +27,10 @@
                 <label for="reference">Reference Species Name:</label>
                 <input type="text" id="reference">
             </div>
+            <div class="label-input-container">
+                <label for="csv-upload">Upload CSV Dataset:</label>
+                <input type="file" id="csv-upload" accept=".csv">
+            </div>
             <button onclick="compareColumns()">Evaluate Differences</button>
         </div>
 
@@ -76,8 +80,12 @@
         </div>
     </div>
 
-    <div id="tree-container"></div>
-    <button id="save-tree">Download Tree</button>
+    <div class="tree-results">
+        <div class="tree-container"></div>
+        <div class="save-tree-wrapper">
+            <button class="save-tree" onclick="saveTree()">Download Tree</button>
+        </div>
+    </div>
 
     <footer>
         <div class="credit">
@@ -89,8 +97,10 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <script src="/format.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/save-svg-as-png/1.4.17/saveSvgAsPng.min.js"></script>
     <script src="/evaluate.js"></script>
 </body>
 </html>

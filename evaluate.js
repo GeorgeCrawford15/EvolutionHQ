@@ -16,7 +16,7 @@ function compareColumns() {
     const statusMessage = document.querySelector('.status-message');
     const binaries = document.querySelectorAll('.binary');
     const binaryArr = Array.from(binaries).map(input => input.value);
-    const areEmptyBinaries = binaryArr.some(binary => binary === "");
+    const areEmptyBinaries = binaryArr.some(binary => binary === ""); // Remove?
     const areNonBinaries = binaryArr.some(binary => binary !== "1" && binary !== "0" && binary !== "");
     const referenceSpecies = document.getElementById('reference').value;
 
@@ -89,7 +89,7 @@ function compareColumns() {
     }
 
     const newick = upgma(distanceMatrix);
-    renderTree(newick);
+    renderTree(newick, referenceSpecies);
 }
 
 function computeDistanceMatrix(columnData) {
@@ -185,8 +185,11 @@ function upgma(distanceMatrix) {
   return clusters[0].newick + ";";
 }
 
-function renderTree(newickStr) {
-    document.getElementById('tree-container').innerHTML = '';
+function renderTree(newickStr, referenceSpecies) {
+    document.querySelector('.tree-container').innerHTML = '';
+    document.querySelector('.tree-results').style.display = 'flex';
+    document.querySelector('.save-tree').style.visibility = 'visible';
+    document.querySelector('.save-tree-wrapper').style.visibility = 'visible';
 
     function parseNewick(str) {
         str = str.replace(/;/g, '');
@@ -224,7 +227,7 @@ function renderTree(newickStr) {
     const treeData = parseNewick(newickStr);
 
     const width = 800, height = 600;
-    const svg = d3.select('#tree-container')
+    const svg = d3.select('.tree-container')
         .append('svg')
         .attr('width', width)
         .attr('height', height);
@@ -254,7 +257,7 @@ function renderTree(newickStr) {
         .attr('cx', d => d.y)
         .attr('cy', d => d.x)
         .attr('r', 4)
-        .attr('fill', 'steelblue');
+        .attr('fill', d => d.data.name === referenceSpecies ? 'green' : 'steelblue');
 
     treeGroup.selectAll('text')
         .data(root.descendants())
@@ -263,5 +266,11 @@ function renderTree(newickStr) {
         .attr('x', d => d.y + 6)
         .attr('y', d => d.x + 3)
         .text(d => d.data.name || '')
-        .style('font-size', '12px');
+        .style('font-size', '12px')
+        .style('fill', d => d.data.name === referenceSpecies ? 'green' : 'black');
+}
+
+function saveTree() {
+    const svg = document.querySelector('.tree-container svg');
+    saveSvgAsPng(svg, 'phylogenetic_tree.png');
 }
