@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punnett Square Calculator</title>
+    <link rel="stylesheet" href="../static/punnett.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button onclick="toggleMonoCross()">Monohybrid Cross</button>
+            <button onclick="toggleDiCross()">Dihybrid Cross</button>
+        </nav>
+        <h1>Punnett Square Calculator</h1>
+    </header>
+
+    <section class="mono-cross">
+        <h2>Monohybrid Cross</h2>
+
+        <div class="input-container">
+            <label for="parent1-input-mono">Parent 1 Genotype:</label>
+            <input type="text" id="parent1-input-mono" placeholder="Aa">
+            <label for="parent2-input-mono">Parent 2 Genotype:</label>
+            <input type="text" id="parent2-input-mono" placeholder="Aa">
+            <button id="mono-button">Find Punnett Square and Ratios</button>
+        </div>
+    
+        <table class="mono-punnett">
+            <caption id="mono-caption">Monohybrid Cross: <span id="parent1-geno-mono"></span> × <span id="parent2-geno-mono"></span></caption>
+            <tr>
+                <th></th>
+                <th id="parent1-gamete1-mono">_</th>
+                <th id="parent1-gamete2-mono">_</th>
+            </tr>
+            <tr>
+                <th id="parent2-gamete1-mono">_</th>
+                <td id="offspring1-mono"></td>
+                <td id="offspring2-mono"></td>
+            </tr>
+            <tr>
+                <th id="parent2-gamete2-mono">_</th>
+                <td id="offspring3-mono"></td>
+                <td id="offspring4-mono"></td>
+            </tr>
+        </table>
+
+        <div class="ratios">
+            <h3>Ratios</h3>
+            <p>Genotypic Ratio: <span id="geno-ratio-mono"></span></p>
+            <p>Phenotypic Ratio: <span id="pheno-ratio-mono"></span></p>
+        </div>
+    </section>
+
+    <section class="di-cross">
+        <h2>Dihybrid Cross</h2>
+
+        <div class="input-container">
+            <label for="parent1-input-di">Parent 1 Genotype:</label>
+            <input type="text" id="parent1-input-di" placeholder="AaBb">
+            <label for="parent2-input-di">Parent 2 Genotype:</label>
+            <input type="text" id="parent2-input-di" placeholder="AaBb">
+            <button id="di-button">Find Punnett Square and Ratios</button>
+        </div>
+
+        <table class="di-punnett">
+            <caption id="di-caption">Dihybrid Cross: <span id="parent1-geno-di"></span> × <span id="parent2-geno-di"></span></caption>
+            <tr>
+                <th></th>
+                <th id="parent1-gamete1-di">__</th>
+                <th id="parent1-gamete2-di">__</th>
+                <th id="parent1-gamete3-di">__</th>
+                <th id="parent1-gamete4-di">__</th>
+            </tr>
+            <tr>
+                <th id="parent2-gamete1-di">__</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th id="parent2-gamete2-di">__</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th id="parent2-gamete3-di">__</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th id="parent2-gamete4-di">__</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="ratios">
+            <h3>Ratios</h3>
+            <p>Genotypic Ratio: <span id="geno-ratio-di"></span></p>
+            <p>Phenotypic Ratio: <span id="pheno-ratio-di"></span></p>
+        </div>
+    </section>
+
+    <script src="../static/get-punnett.js"></script>
+</body>
+</html>

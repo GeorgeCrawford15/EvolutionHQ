@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #777;
+}
+
+body {
+    background: linear-gradient(
+        to right,
+        #a8ff85,
+        #6fffdd
+    );
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+.di-cross {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-container * {
+    margin: 10px;
+    font-size: larger;
+}
+
+.input-container input {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+input::placeholder {
+    font-size: 0.9em; 
+    opacity: 0.6;     
+    color: #666;       
+}
+
+.input-container button {
+    padding: 10px 20px;
+    margin-bottom: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: #737373;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+    background-color: #555;
+}
+
+.input-container button:active {
+    background-color: #777;
+}
+
+.mono-punnett, .di-punnett {
+    border-collapse: collapse;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 2px solid #333;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #a3a3a3;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    opacity: 0;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+.ratios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.ratios h3 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.ratios p {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
