@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punnett Square Calculator</title>
-    <link rel="stylesheet" href="../static/punnett.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/punnett.css') }}">
 </head>
 <body>
 
@@ -110,6 +110,6 @@
         </div>
     </section>
 
-    <script src="../static/get-punnett.js"></script>
+    <script src="{{ url_for('static', filename='js/get-punnett.js') }}"></script>
 </body>
 </html>

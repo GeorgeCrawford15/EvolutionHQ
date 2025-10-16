@@ -153,7 +153,7 @@ def simplify_ratio(*numbers):
 
   return simplified_values
 
-def di_genotypic_ratio(offspring_arr):
+def di_genotypic_ratio(offspring_arr): # MAKE THIS FUNCTION MORE EFFICIENT WITH LOOPS AND LISTS
   homo_dom1_2 = 0
   homo_dom1_hetero2 = 0
   homo_dom1_homo_rec2 = 0
@@ -242,25 +242,27 @@ def di_phenotypic_ratio(offspring_arr):
 
 @app.route('/calculateddi', methods=['POST'])
 def calculate_di_punnett():
-    data = request.get_json()
-    if not data or 'parent1' not in data or 'parent2' not in data:
-        return jsonify({'error': 'Please provide both parent1 and parent2 genotypes'}), 400
+  data = request.get_json()
+  if not data or 'parent1' not in data or 'parent2' not in data:
+      return jsonify({'error': 'Please provide both parent1 and parent2 genotypes'}), 400
     
-    parent1 = data['parent1']
-    parent2 = data['parent2']
+  parent1 = data['parent1']
+  parent2 = data['parent2']
 
-    offspring_arr = di_punnett(parent1, parent2)
-    geno_ratio = di_genotypic_ratio(offspring_arr)
-    pheno_ratio = di_phenotypic_ratio(offspring_arr)
+  offspring_arr = di_punnett(parent1, parent2)
+  geno_ratio = di_genotypic_ratio(offspring_arr)
+  pheno_ratio = di_phenotypic_ratio(offspring_arr)
 
-    response = {
-      'offspring': offspring_arr,
-      'geno_ratio': geno_ratio,
-      'pheno_ratio': pheno_ratio
-    }
-    
-    return jsonify(response), 200
+  response = {
+    'offspring': offspring_arr,
+    'geno_ratio': geno_ratio,
+    'pheno_ratio': pheno_ratio
+  }
+
+  return jsonify(response), 200
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+  import os
+  port = int(os.environ.get('PORT', 5000))
+  app.run(debug=True, host='0.0.0.0', port=port)
