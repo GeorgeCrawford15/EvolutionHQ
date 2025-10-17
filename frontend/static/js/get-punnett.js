@@ -30,7 +30,10 @@ const offspring4Mono = document.getElementById('offspring4-mono');
 const genotypicRatioMono = document.getElementById('geno-ratio-mono');
 const phenotypicRatioMono = document.getElementById('pheno-ratio-mono');
 
-const baseUrl = `${window.location.protocol}//${window.location.hostname}` + ((window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? ':5001' : '');
+const baseUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? `${window.location.protocol}//${window.location.hostname}:5001/cross` 
+  : `${window.location.protocol}//${window.location.hostname}/api/cross`;
+
 
 monoButton.addEventListener('click', function() {
     const parent1Input = document.getElementById('parent1-input-mono').value;
@@ -45,7 +48,7 @@ monoButton.addEventListener('click', function() {
     parent1GenoDescriptionMono.innerText = parent1Input;
     parent2GenoDescriptionMono.innerText = parent2Input;
 
-    fetch(`${baseUrl}/api/calculatemono`, {
+    fetch(`${baseUrl}/calculatemono`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -120,7 +123,7 @@ diButton.addEventListener('click', function() {
     parent1GenoDescriptionDi.innerText = parent1Input;
     parent2GenoDescriptionDi.innerText = parent2Input;
 
-    fetch(`${baseUrl}/api/calculatedi`, {
+    fetch(`${baseUrl}/calculatedi`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

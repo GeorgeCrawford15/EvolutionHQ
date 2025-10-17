@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app, resources={r'/*': {'origins': ['https://www.evolutionhq.org']}})
 
-@app.route('/api/calculatemono', methods=['POST'])
+@app.route('/calculatemono', methods=['POST'])
 def calculate_mono_punnett():
     data = request.get_json()
     if not data or 'parent1' not in data or 'parent2' not in data:
@@ -31,7 +31,7 @@ def calculate_mono_punnett():
     
     return jsonify(response), 200
 
-@app.route('/api/calculatedi', methods=['POST'])
+@app.route('/calculatedi', methods=['POST'])
 def calculate_di_punnett():
   data = request.get_json()
   if not data or 'parent1' not in data or 'parent2' not in data:
