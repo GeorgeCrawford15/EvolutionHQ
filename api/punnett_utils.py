@@ -1,13 +1,3 @@
-from flask import Flask, request, jsonify, render_template
-from flask_cors import CORS
-
-app = Flask(__name__)
-CORS(app)
-
-@app.route('/')
-def index():
-  return render_template('punnett-square.html')
-
 # monohybrid logic
 def mono_punnett(parent1, parent2):
   parent1gamete1 = parent1[0]
@@ -76,31 +66,6 @@ def mono_phenotypic_ratio(offspring1, offspring2, offspring3, offspring4):
     pheno_ratio = "3 : 1"
   
   return pheno_ratio
-
-@app.route('/calculatemono', methods=['POST'])
-def calculate_mono_punnett():
-    data = request.get_json()
-    if not data or 'parent1' not in data or 'parent2' not in data:
-        return jsonify({'error': 'Please provide both parent1 and parent2 genotypes'}), 400
-    
-    parent1 = data['parent1']
-    parent2 = data['parent2']
-    
-    offspring1, offspring2, offspring3, offspring4 = mono_punnett(parent1, parent2)
-    
-    geno_ratio = mono_genotypic_ratio(offspring1, offspring2, offspring3, offspring4)
-    pheno_ratio = mono_phenotypic_ratio(offspring1, offspring2, offspring3, offspring4)
-    
-    response = {
-      'offspring1': offspring1,
-      'offspring2': offspring2,
-      'offspring3': offspring3,
-      'offspring4': offspring4,
-      'geno_ratio': geno_ratio,
-      'pheno_ratio': pheno_ratio
-    }
-    
-    return jsonify(response), 200
 
 
 # dihybrid logic
@@ -209,7 +174,6 @@ def di_genotypic_ratio(offspring_arr): # MAKE THIS FUNCTION MORE EFFICIENT WITH 
 
   return geno_ratio
 
-
 def di_phenotypic_ratio(offspring_arr):
   dom_traits1_2 = 0
   dom_trait1_rec_trait2 = 0
@@ -237,32 +201,3 @@ def di_phenotypic_ratio(offspring_arr):
   pheno_ratio = pheno_ratio[:-1]
   
   return pheno_ratio
-
-
-
-@app.route('/calculateddi', methods=['POST'])
-def calculate_di_punnett():
-  data = request.get_json()
-  if not data or 'parent1' not in data or 'parent2' not in data:
-      return jsonify({'error': 'Please provide both parent1 and parent2 genotypes'}), 400
-    
-  parent1 = data['parent1']
-  parent2 = data['parent2']
-
-  offspring_arr = di_punnett(parent1, parent2)
-  geno_ratio = di_genotypic_ratio(offspring_arr)
-  pheno_ratio = di_phenotypic_ratio(offspring_arr)
-
-  response = {
-    'offspring': offspring_arr,
-    'geno_ratio': geno_ratio,
-    'pheno_ratio': pheno_ratio
-  }
-
-  return jsonify(response), 200
-
-
-if __name__ == '__main__':
-  import os
-  port = int(os.environ.get('PORT', 5000))
-  app.run(debug=False, host='0.0.0.0', port=port)
