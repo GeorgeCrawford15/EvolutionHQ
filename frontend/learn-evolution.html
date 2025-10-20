@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Evolution | Evolution HQ</title>
+    <link rel="stylesheet" href="static/css/learn-evolution.css">
+    <link rel="icon" href="static/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header class="page-header">
+        <a class="homepage" href="https://www.evolutionhq.org">Return to Homepage</a>
+        <div class="container">
+            <h1>Learn Evolution</h1>
+            <p class="subtitle">A concise AP Biology level guide to evolutionary concepts, genetics, and phylogenetics.</p>
+        </div>
+    </header>
+
+    <nav class="toc container" aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#mendelian">Mendelian Genetics</a></li>
+            <li><a href="#hardy-weinberg">Hardy–Weinberg & Allele Frequencies</a></li>
+            <li><a href="#selection">Natural Selection & Adaptation</a></li>
+            <li><a href="#phylogenetics">Phylogenetics & Tree Building</a></li>
+            <li><a href="#speciation">Speciation & Macroevolution</a></li>
+            <li><a href="#evidence">Evidence for Evolution</a></li>
+            <li><a href="#further">Further Reading</a></li>
+        </ul>
+    </nav>
+
+    <main class="container content">
+        <section id="overview" class="section">
+            <h2>Overview</h2>
+            <p>Evolution is the change in heritable traits of biological populations over successive generations. It is driven by mechanisms such as mutation, natural selection, genetic drift, migration (gene flow), and recombination. The modern synthesis unifies Darwinian natural selection with Mendelian genetics.</p>
+
+            <p>Key vocabulary: gene, allele, genotype, phenotype, population, gene pool, fitness, selection, drift.</p>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Define 'allele' and explain how it differs from 'gene'.</li>
+                <li>Explain why populations (not individuals) evolve.</li>
+                <li>List the primary mechanisms that can change allele frequencies in a population.</li>
+            </ol>
+        </section>
+
+        <section id="mendelian" class="section">
+            <h2>Mendelian Genetics</h2>
+            <p>Gregor Mendel's experiments showed that traits are inherited discretely through units we now call genes. Alleles may be dominant or recessive. In a simple monogenic trait with two alleles (A and a):</p>
+
+            <ul>
+                <li>Genotype examples: AA (homozygous dominant), Aa (heterozygous), aa (homozygous recessive).</li>
+                <li>Phenotype depends on dominance relationships (complete dominance, incomplete dominance, codominance).</li>
+            </ul>
+
+            <p>Punnett squares are used to predict offspring genotypes from parental genotypes for monohybrid and dihybrid crosses. For a monohybrid cross Aa x Aa, expected genotypic ratio is 1:2:1 (AA:Aa:aa) and phenotypic ratio (if A is dominant) is 3:1.</p>
+
+            <div class="figure">
+                <img src="static/images/placeholder-punnett.png" alt="Placeholder: Punnett square diagram (replace with real image)" />
+                <figcaption>Punnett square: monohybrid Aa x Aa (placeholder image)</figcaption>
+            </div>
+
+            <h3>Extensions</h3>
+            <p>Dihybrid crosses (AaBb x AaBb) follow the independent assortment of genes located on different chromosomes, producing a 9:3:3:1 phenotypic ratio under independent assortment and complete dominance.</p>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Predict the genotypic and phenotypic ratios of a cross between two heterozygotes, Aa x Aa.</li>
+                <li>Explain what 'codominance' looks like in a phenotype (give an example).</li>
+                <li>Describe how a dihybrid cross would change if the two genes were linked (not independently assorting).</li>
+                <li>Draw or describe a 2x2 Punnett square for a monohybrid cross.</li>
+            </ol>
+        </section>
+
+        <section id="hardy-weinberg" class="section">
+            <h2>Hardy–Weinberg Equilibrium & Allele Frequencies</h2>
+            <p>The Hardy–Weinberg principle provides a mathematical baseline for allele frequencies in a non-evolving population. For a locus with two alleles, A and a, with frequencies p and q respectively:</p>
+
+            <div class="formula">p + q = 1</div>
+            <div class="formula">p<sup>2</sup> + 2pq + q<sup>2</sup> = 1</div>
+
+            <p>Interpretation: p<sup>2</sup> is the expected frequency of AA, 2pq of Aa, and q<sup>2</sup> of aa. Hardy–Weinberg equilibrium requires: no selection, no mutation, no migration, infinitely large population (no drift), and random mating.</p>
+
+            <p>Use cases: estimating allele frequencies from phenotype data, testing whether evolution is occurring at a locus (deviation from expected proportions).</p>
+
+            <h4>Worked example</h4>
+            <p>If 9% of a population shows the recessive phenotype (aa), then q<sup>2</sup> = 0.09 so q = 0.3 and p = 0.7. Expected heterozygote frequency = 2pq = 2(0.7)(0.3) = 0.42 (42%).</p>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Show how to calculate p and q when q<sup>2</sup> = 0.04.</li>
+                <li>List the five conditions required for Hardy–Weinberg equilibrium.</li>
+                <li>Explain one biological scenario that would cause departure from Hardy–Weinberg proportions.</li>
+            </ol>
+        </section>
+
+        <section id="selection" class="section">
+            <h2>Natural Selection & Adaptation</h2>
+            <p>Natural selection is the differential survival and reproduction of individuals due to differences in phenotype. Fitness (w) quantifies reproductive success; relative fitness is often used to compare genotypes.</p>
+
+            <p>Selection coefficient (s) measures the strength of selection against a genotype (w = 1 - s). For example, if genotype AA has fitness 1, and aa has fitness 1 - s, then s is the proportional reduction in fitness.</p>
+
+            <p>Types of selection:</p>
+            <ul>
+                <li>Directional selection — shifts the mean phenotype in one direction.</li>
+                <li>Stabilizing selection — favors intermediate phenotypes and reduces variance.</li>
+                <li>Disruptive selection — favors extremes and can increase variance or lead to speciation.</li>
+            </ul>
+
+            <p>Selection interacts with mutation, migration, and genetic drift. In small populations drift can overcome weak selection.</p>
+
+            <div class="figure">
+                <img src="static/images/placeholder-selection.png" alt="Placeholder: Graph showing directional/stabilizing/disruptive selection" />
+                <figcaption>Selection modes (placeholder)</figcaption>
+            </div>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Define 'fitness' and explain what a selection coefficient of 0.1 means for a genotype.</li>
+                <li>Give an example of directional selection in nature.</li>
+                <li>Explain why small populations are more affected by genetic drift than large populations.</li>
+            </ol>
+        </section>
+
+        <section id="phylogenetics" class="section">
+            <h2>Phylogenetics & Tree Building</h2>
+            <p>Phylogenetics reconstructs evolutionary relationships between species (or genes) using shared traits, which can be morphological or molecular. Key concepts include homology (shared ancestry) and analogy (convergent similarity).</p>
+
+            <p>Common tree-building methods:</p>
+            <ul>
+                <li>Distance methods (e.g., Neighbor-Joining) — use pairwise distances.</li>
+                <li>Maximum parsimony — finds the tree with minimal character changes.</li>
+                <li>Maximum likelihood / Bayesian inference — use explicit models of sequence evolution (most powerful for molecular data).</li>
+            </ul>
+
+            <div class="figure">
+                <img src="static/images/placeholder-tree.png" alt="Placeholder: Example phylogenetic tree (replace with real image)" />
+                <figcaption>Phylogenetic tree (placeholder).</figcaption>
+            </div>
+
+            <p>Important: an evolutionary tree's topology (branching order) is the key statement of relationships; branch lengths may represent genetic change or time.</p>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Differentiate between homologous and analogous traits with examples.</li>
+                <li>Explain what parsimony seeks to minimize in tree-building.</li>
+                <li>Describe one advantage of model-based methods (likelihood/Bayesian) over parsimony.</li>
+            </ol>
+        </section>
+
+        <section id="speciation" class="section">
+            <h2>Speciation & Macroevolution</h2>
+            <p>Speciation is the process by which one lineage splits into two reproductively isolated lineages. Modes of speciation:</p>
+            <ul>
+                <li>Allopatric — geographic isolation creates barriers to gene flow.</li>
+                <li>Sympatric — speciation without geographic separation (e.g., polyploidy in plants).</li>
+                <li>Parapatric — adjacent populations diverge due to environmental gradients.</li>
+            </ul>
+
+            <p>Reproductive isolating mechanisms can be prezygotic (behavioral, temporal, mechanical, gametic) or postzygotic (hybrid inviability or sterility).</p>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Provide an example of allopatric speciation.</li>
+                <li>What is polyploidy and how can it cause instant speciation in plants?</li>
+                <li>List two prezygotic isolating mechanisms.</li>
+            </ol>
+        </section>
+
+        <section id="evidence" class="section">
+            <h2>Evidence for Evolution</h2>
+            <p>Multiple independent lines of evidence support evolution:</p>
+            <ul>
+                <li>Fossil record shows transitional forms and historical change.</li>
+                <li>Comparative anatomy (homologous structures, vestigial traits).</li>
+                <li>Biogeography — distribution of species consistent with evolutionary history.</li>
+                <li>Molecular biology — DNA and protein similarities reveal relatedness; molecular clocks estimate divergence times.</li>
+                <li>Direct observation — antibiotic resistance, pesticide resistance, experimental evolution.</li>
+            </ul>
+
+            <h3>Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Explain how vestigial structures provide evidence for evolution.</li>
+                <li>How does molecular sequence data support phylogenetic relationships?</li>
+                <li>Give a recent real-world example of observed evolution.</li>
+            </ol>
+        </section>
+
+        <section id="further" class="section">
+            <h2>Further Reading & Resources</h2>
+            <ul>
+                <li>Textbooks: 'Evolution' by Futuyma, 'Principles of Population Genetics' by Hartl & Clark.</li>
+                <li>Online resources: National Center for Biotechnology Information (NCBI), Tree of Life Web Project.</li>
+                <li>Practice: Work Punnett squares, Hardy–Weinberg problems, and simple phylogenetic reconstructions.</li>
+            </ul>
+
+            <h3>Final Checkpoint</h3>
+            <ol class="checkpoints">
+                <li>Summarize in a paragraph how mutation, selection, drift and migration interact to shape evolution.</li>
+                <li>Describe a small research question you could test in a lab or field project related to evolution.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>Created by George Crawford — EvolutionHQ</p>
+        </div>
+    </footer>
+</body>
+</html>
