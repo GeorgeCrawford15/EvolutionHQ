@@ -24,6 +24,18 @@ The project combines a **modern frontend** (HTML, CSS, JavaScript) with a **Pyth
   - Input two two-gene genotypes for a more complex cross.  
   - Displays offspring in a Punnett square format with ratios.  
 
+- **Matrix Table**
+  - Input or upload data from a CSV file.
+  - Generates insights about most closely related species.
+
+- **Phylogenetic Tree Generator**
+  - Created automatically based on information from the matrix table.
+  - Highlights species of interest and can be downloaded.
+
+- **Evolution Educational Page**
+  - Provides clear and concise information about evolution.
+  - Includes checkpoint questions to ensure students' comprehension.
+
 - **Interactive Frontend**  
   - Smooth animations for showing offspring cells.  
   - Toggle between monohybrid and dihybrid cross sections.  
