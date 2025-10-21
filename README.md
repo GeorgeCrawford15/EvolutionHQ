@@ -1,6 +1,6 @@
 # EvolutionHQ
 
-**A web-based tool for learning genetics through interactive Punnett squares.**
+**A web-based tool for high school students learning the fundamentals of evolution.**
 
 [Check Out EvolutionHQ](https://www.evolutionhq.org)
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-**EvolutionHQ** is an educational web application designed to help students explore and understand Mendelian genetics. Users can input parent genotypes for **monohybrid** or **dihybrid crosses**, and the application will automatically generate the offspring combinations along with genotypic and phenotypic ratios.  
+**EvolutionHQ** is an interactive educational web application that helps students explore genetics and evolution. It allows users to perform monohybrid and dihybrid crosses, generating offspring combinations with genotypic and phenotypic ratios, while providing smooth frontend animations. Beyond genetics, users can create a matrix table from inputted or uploaded CSV data to analyze species relationships, automatically generate a phylogenetic tree highlighting species of interest, and explore evolution through an educational page with checkpoint questions to reinforce learning.
 
 The project combines a **modern frontend** (HTML, CSS, JavaScript) with a **Python Flask backend** to calculate Punnett square outcomes dynamically. This makes the learning experience interactive and immediately responsive.
 
