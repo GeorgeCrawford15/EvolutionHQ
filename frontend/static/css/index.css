@@ -18,11 +18,8 @@ header {
     padding: 30px;
     max-width: 1000px;
     text-align: center;
-    background: radial-gradient(
-        circle 700px,
-        rgb(252, 252, 252),
-        rgb(211, 211, 211)
-    );
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
