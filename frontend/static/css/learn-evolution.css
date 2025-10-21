@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --bg: #0f1724;
     --card: #0b1220;
@@ -11,7 +15,7 @@
     --accent-2: #735910; /* blue */
     --muted: #1c2b41;
     --glass: rgba(255,255,255,0.04);
-    --max-width: 1000px;
+    --max-width: 1500px;
 }
 
 body{
@@ -50,11 +54,13 @@ body{
     padding: 2rem 0 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.04);
 }
+
 .page-header h1 {
     font-size: 2rem;
     color: var(--accent);
     letter-spacing: -0.5px;
 }
+
 .page-header .subtitle {
     color: var(--muted);
     margin-top: 0.4rem;
@@ -106,9 +112,9 @@ body{
 
 .section {
     background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); 
-    border-radius: 12px; 
+    border-radius: 12px;
     padding: 1.25rem; 
-    margin-top: 1rem; 
+    margin-top: 1rem;
     box-shadow: 0 6px 16px rgba(2,6,23,0.55);
 } 
 
