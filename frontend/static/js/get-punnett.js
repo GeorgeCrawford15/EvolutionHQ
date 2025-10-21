@@ -36,7 +36,7 @@ const phenotypicRatioMono = document.getElementById('pheno-ratio-mono');
 
 const baseUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
   ? `${window.location.protocol}//${window.location.hostname}:5001/cross`
-  : ''; // replace with your Render URL
+  : 'https://evolutionhq.onrender.com';
 
 
 monoButton.addEventListener('click', function() {
