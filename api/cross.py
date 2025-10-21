@@ -4,7 +4,7 @@ import punnett_utils as pu
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r'/*': {'origins': ['https://www.evolutionhq.org']}})
+CORS(app, origins=["http://127.0.0.1:5500", "https://www.evolutionhq.org"], supports_credentials=True)
 
 @app.route('/calculatemono', methods=['POST'])
 def calculate_mono_punnett():
