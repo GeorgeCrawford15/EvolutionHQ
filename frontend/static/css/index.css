@@ -50,7 +50,7 @@ hr {
 
 h2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: rgba(6, 34, 47, 0.75);
     max-width: 900px;
@@ -133,7 +133,95 @@ footer {
     margin-top: 40px;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 1650px) {
+    img {
+        width: 28vw;
+    }
+    span {
+        font-size: 1.5vw;
+        height: 15vw;
+        width: 28vw;
+    }
+    .credit {
+        margin-top: -10px;
+    }
+    .credit p,
+    .credit a {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    main {
+        margin-top: 100px;
+    }
+    .widget {
+        width: 300px;
+    }
+    img {
+        width: 300px;
+    }
+    span {
+        font-size: 17px;
+        height: 190px;
+        width: revert;
+    }
+    .credit {
+        margin-top: 100px;
+    }
+    .credit p {
+        font-size: 1.3rem;
+    }
+    .credit a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        max-width: 700px;
+        margin-top: 50px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -30px;
+    }
+    .widget {
+        width: revert;
+        margin: 50px 0;
+    }
+    img {
+        width: revert;
+    }
+    span {
+        font-size: x-large;
+        height: fit-content;
+    }
+    .credit {
+        margin-top: revert;
+        margin-bottom: 50px;
+    }
+    .credit p {
+        font-size: 1.3rem;
+    }
+    .credit a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        max-width: 500px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 520px) { /* Confirm this query selector */
+    header {
+        max-width: 600px;
+        margin-top: 50px;
+    }
     header {
         padding: 22px 18px;
     }
