@@ -212,7 +212,7 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        max-width: 500px;
+        width: 300px;
         margin-top: 50px;
     }
 }
@@ -229,12 +229,11 @@ footer {
         font-size: 38px;
         line-height: 50px;
     }
-    
     .widget,
     img {
-        width: 450px;
+        width: 300px;
     }
     span {
-        font-size: 4vw;
+        font-size: 4.2vw;
     }
 }
