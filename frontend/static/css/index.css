@@ -217,19 +217,24 @@ footer {
     }
 }
 
-@media (max-width: 520px) { /* Confirm this query selector */
+@media (max-width: 520px) { 
     header {
-        max-width: 600px;
+        max-width: 450px;
         margin-top: 50px;
     }
     header {
         padding: 22px 18px;
     }
     h1 {
-        font-size: 28px;
+        font-size: 38px;
+        line-height: 50px;
     }
-    h2 {
-        font-size: 14px;
-        padding: 0 6px;
+    
+    .widget,
+    img {
+        width: 450px;
+    }
+    span {
+        font-size: 4vw;
     }
 }

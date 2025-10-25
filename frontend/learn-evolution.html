@@ -33,174 +33,497 @@
     <main class="container content">
         <section id="overview" class="section">
             <h2>Overview</h2>
-            <p>Evolution is the change in heritable traits of biological populations over successive generations. It is driven by mechanisms such as mutation, natural selection, genetic drift, migration (gene flow), and recombination. The modern synthesis unifies Darwinian natural selection with Mendelian genetics.</p>
+            <p>Evolution is the story of life changing through time: populations gradually shift in their traits because of variation, heredity, and differential success. Think of populations as decks of cards (the gene pool) — shuffling, drawing, and swapping cards over generations produces new combinations of traits. The main processes that shuffle and sort those cards are mutation (new cards), natural selection (which cards win the game), genetic drift (random shuffling), migration/gene flow (cards moving between decks), and recombination (mixing cards during reproduction).</p>
 
-            <p>Key vocabulary: gene, allele, genotype, phenotype, population, gene pool, fitness, selection, drift.</p>
+            <p>Big idea: evolution does not have a direction or final goal — it is a continual response to environments, constraints, and chance. The modern synthesis connects Darwin's natural selection to Mendel's genetics so we can predict how allele frequencies change over time.</p>
 
-            <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Define 'allele' and explain how it differs from 'gene'.</li>
-                <li>Explain why populations (not individuals) evolve.</li>
-                <li>List the primary mechanisms that can change allele frequencies in a population.</li>
-            </ol>
+            <div class="figure">
+                <img src="static/images/placeholder-evolution-overview.png" alt="Placeholder: Conceptual diagram showing mechanisms of evolution" />
+                <figcaption>Overview: forces that change allele frequencies (placeholder).</figcaption>
+            </div>
         </section>
 
         <section id="mendelian" class="section">
             <h2>Mendelian Genetics</h2>
-            <p>Gregor Mendel's experiments showed that traits are inherited discretely through units we now call genes. Alleles may be dominant or recessive. In a simple monogenic trait with two alleles (A and a):</p>
+            <p>Gregor Mendel discovered that traits are passed as discrete units (genes) and that each individual carries two versions (alleles) of a gene. Simple Mendelian inheritance makes predictions about offspring when alleles interact in predictable ways. Dominant alleles mask recessive ones in a heterozygote; codominance and incomplete dominance are variants where both alleles influence the phenotype.</p>
 
             <ul>
-                <li>Genotype examples: AA (homozygous dominant), Aa (heterozygous), aa (homozygous recessive).</li>
-                <li>Phenotype depends on dominance relationships (complete dominance, incomplete dominance, codominance).</li>
+                <li>Alleles and genotype: two copies per individual, inherited one from each parent.</li>
+                <li>Dominance patterns: complete dominance, incomplete dominance, codominance — each produces distinct phenotypic outcomes.</li>
             </ul>
 
-            <p>Punnett squares are used to predict offspring genotypes from parental genotypes for monohybrid and dihybrid crosses. For a monohybrid cross Aa x Aa, expected genotypic ratio is 1:2:1 (AA:Aa:aa) and phenotypic ratio (if A is dominant) is 3:1.</p>
+            <p>Punnett squares are a quick way to visualize how parental alleles combine. For example, Aa × Aa produces AA, Aa, Aa, aa genotypes — a predictable 1:2:1 genotypic ratio even as phenotypes depend on dominance relationships.</p>
 
             <div class="figure">
                 <img src="static/images/placeholder-punnett.png" alt="Placeholder: Punnett square diagram (replace with real image)" />
-                <figcaption>Punnett square: monohybrid Aa x Aa (placeholder image)</figcaption>
+                <figcaption>Punnett square: monohybrid Aa × Aa (placeholder image).</figcaption>
+            </div>
+
+            <div class="figure">
+                <img src="static/images/placeholder-genetics-concepts.png" alt="Placeholder: Allele interactions and dominance" />
+                <figcaption>Allele interactions: dominance and codominance examples (placeholder).</figcaption>
             </div>
 
             <h3>Extensions</h3>
-            <p>Dihybrid crosses (AaBb x AaBb) follow the independent assortment of genes located on different chromosomes, producing a 9:3:3:1 phenotypic ratio under independent assortment and complete dominance.</p>
+            <p>When multiple genes influence traits (polygenic inheritance) or genes are linked on the same chromosome, inheritance patterns become richer. Linkage reduces independent assortment and generates non-Mendelian ratios unless crossing-over recombines alleles.</p>
 
             <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Predict the genotypic and phenotypic ratios of a cross between two heterozygotes, Aa x Aa.</li>
-                <li>Explain what 'codominance' looks like in a phenotype (give an example).</li>
-                <li>Describe how a dihybrid cross would change if the two genes were linked (not independently assorting).</li>
-                <li>Draw or describe a 2x2 Punnett square for a monohybrid cross.</li>
+            <ol class="checkpoints topic1">
+                <li>For a monohybrid cross Aa x Aa, what is the expected genotypic ratio?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q1-a1" name="topic1-q1">
+                        <label for="topic1-q1-a1">1 : 2 : 1 (AA : Aa : aa)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q1-a2" name="topic1-q1">
+                        <label for="topic1-q1-a2">3 : 1 (dominant : recessive)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q1-a3" name="topic1-q1">
+                        <label for="topic1-q1-a3">9 : 3 : 3 : 1 (dihybrid)</label>
+                    </div>
+                </div>
+
+                <li>Which example best illustrates codominance?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q2-a1" name="topic1-q2">
+                        <label for="topic1-q2-a1">Both alleles expressed equally (e.g., roan cattle with red and white hairs)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q2-a2" name="topic1-q2">
+                        <label for="topic1-q2-a2">One allele completely masks the other (complete dominance)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q2-a3" name="topic1-q2">
+                        <label for="topic1-q2-a3">Alleles blend to produce an intermediate (incomplete dominance)</label>
+                    </div>
+                </div>
+
+                <li>If two genes are genetically linked (close on same chromosome), what change would you expect in a dihybrid cross?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q3-a1" name="topic1-q3">
+                        <label for="topic1-q3-a1">Increased parental-type offspring and fewer recombinants than 9:3:3:1 predicts</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q3-a2" name="topic1-q3">
+                        <label for="topic1-q3-a2">Still a 9:3:3:1 phenotypic ratio regardless of linkage</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q3-a3" name="topic1-q3">
+                        <label for="topic1-q3-a3">Only recombinant offspring are produced</label>
+                    </div>
+                </div>
+
+                <li>Which set lists the four genotypes you would place inside a 2x2 Punnett square for Aa x Aa?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q4-a1" name="topic1-q4">
+                        <label for="topic1-q4-a1">AA, Aa, Aa, aa</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q4-a2" name="topic1-q4">
+                        <label for="topic1-q4-a2">AA, AA, aa, aa</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic1-q4-a3" name="topic1-q4">
+                        <label for="topic1-q4-a3">Aa, Aa, Aa, Aa</label>
+                    </div>
+                </div>
             </ol>
         </section>
 
         <section id="hardy-weinberg" class="section">
             <h2>Hardy–Weinberg Equilibrium & Allele Frequencies</h2>
-            <p>The Hardy–Weinberg principle provides a mathematical baseline for allele frequencies in a non-evolving population. For a locus with two alleles, A and a, with frequencies p and q respectively:</p>
+            <p>Hardy–Weinberg is a null model: if nothing interesting is happening (no selection, mutation, migration, drift, and mating is random), allele and genotype frequencies stay constant. For a simple two-allele system, p and q describe allele frequencies and p², 2pq, q² predict genotype frequencies. Deviations from the prediction indicate that evolutionary forces are acting.</p>
 
             <div class="formula">p + q = 1</div>
             <div class="formula">p<sup>2</sup> + 2pq + q<sup>2</sup> = 1</div>
 
-            <p>Interpretation: p<sup>2</sup> is the expected frequency of AA, 2pq of Aa, and q<sup>2</sup> of aa. Hardy–Weinberg equilibrium requires: no selection, no mutation, no migration, infinitely large population (no drift), and random mating.</p>
+            <p>Why it matters: use Hardy–Weinberg to estimate carrier frequencies from phenotypes (e.g., if q² is known), and as a statistical baseline — significant departure suggests evolution at that locus. Remember assumptions — reality often violates one or more, which is why the model is practically useful.</p>
 
-            <p>Use cases: estimating allele frequencies from phenotype data, testing whether evolution is occurring at a locus (deviation from expected proportions).</p>
+            <div class="figure">
+                <img src="static/images/placeholder-hardy-weinberg.png" alt="Placeholder: Illustration showing allele frequencies across generations" />
+                <figcaption>Hardy–Weinberg as a baseline model (placeholder).</figcaption>
+            </div>
 
             <h4>Worked example</h4>
-            <p>If 9% of a population shows the recessive phenotype (aa), then q<sup>2</sup> = 0.09 so q = 0.3 and p = 0.7. Expected heterozygote frequency = 2pq = 2(0.7)(0.3) = 0.42 (42%).</p>
+            <p>If 9% of a population shows the recessive phenotype (aa), q² = 0.09 so q = 0.3 and p = 0.7. Expected heterozygotes = 2pq = 0.42 (42%).</p>
 
             <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Show how to calculate p and q when q<sup>2</sup> = 0.04.</li>
-                <li>List the five conditions required for Hardy–Weinberg equilibrium.</li>
-                <li>Explain one biological scenario that would cause departure from Hardy–Weinberg proportions.</li>
+            <ol class="checkpoints topic2">
+                <li class="q1">If q² = 0.04, what are q and p?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q1-a1" name="topic2-q1">
+                        <label for="topic2-q1-a1">q = 0.2 and p = 0.8</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q1-a2" name="topic2-q1">
+                        <label for="topic2-q1-a2">q = 0.4 and p = 0.6</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q1-a3" name="topic2-q1">
+                        <label for="topic2-q1-a3">q = 0.02 and p = 0.98</label>
+                    </div>
+                </div>
+
+                <li class="q2">Which list correctly contains the five conditions required for Hardy–Weinberg equilibrium?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q2-a1" name="topic2-q2">
+                        <label for="topic2-q2-a1">No selection, no mutation, no migration, infinite population size (no drift), random mating</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q2-a2" name="topic2-q2">
+                        <label for="topic2-q2-a2">High mutation, strong selection, nonrandom mating, small population, migration</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q2-a3" name="topic2-q2">
+                        <label for="topic2-q2-a3">Only random mating and no selection are required</label>
+                    </div>
+                </div>
+
+                <li class="q3">Which biological scenario would most likely cause departure from Hardy–Weinberg proportions?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q3-a1" name="topic2-q3">
+                        <label for="topic2-q3-a1">A sudden bottleneck creating a very small population (genetic drift)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q3-a2" name="topic2-q3">
+                        <label for="topic2-q3-a2">Large population with completely random mating</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic2-q3-a3" name="topic2-q3">
+                        <label for="topic2-q3-a3">No mutation occurring at the locus</label>
+                    </div>
+                </div>
             </ol>
         </section>
 
         <section id="selection" class="section">
             <h2>Natural Selection & Adaptation</h2>
-            <p>Natural selection is the differential survival and reproduction of individuals due to differences in phenotype. Fitness (w) quantifies reproductive success; relative fitness is often used to compare genotypes.</p>
+            <p>Natural selection is the non-random increase of beneficial traits. Individuals do not evolve — populations do, as heritable trait variants that increase survival or reproduction rise in frequency. Fitness (w) quantifies reproductive success; the selection coefficient (s) describes how much less fit a genotype is relative to a reference (w = 1 − s).</p>
 
-            <p>Selection coefficient (s) measures the strength of selection against a genotype (w = 1 - s). For example, if genotype AA has fitness 1, and aa has fitness 1 - s, then s is the proportional reduction in fitness.</p>
-
-            <p>Types of selection:</p>
-            <ul>
-                <li>Directional selection — shifts the mean phenotype in one direction.</li>
-                <li>Stabilizing selection — favors intermediate phenotypes and reduces variance.</li>
-                <li>Disruptive selection — favors extremes and can increase variance or lead to speciation.</li>
-            </ul>
-
-            <p>Selection interacts with mutation, migration, and genetic drift. In small populations drift can overcome weak selection.</p>
+            <p>Selection comes in flavors: directional (favors one extreme), stabilizing (favors intermediates), and disruptive (favors extremes). Real-world adaptation is a balance between selection, mutation creating raw material, gene flow mixing variation, and drift introducing chance.</p>
 
             <div class="figure">
                 <img src="static/images/placeholder-selection.png" alt="Placeholder: Graph showing directional/stabilizing/disruptive selection" />
-                <figcaption>Selection modes (placeholder)</figcaption>
+                <figcaption>Modes of selection (placeholder).</figcaption>
+            </div>
+
+            <div class="figure">
+                <img src="static/images/placeholder-adaptation-example.png" alt="Placeholder: Example adaptation such as beak variation in birds" />
+                <figcaption>Example adaptation in nature (placeholder).</figcaption>
             </div>
 
             <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Define 'fitness' and explain what a selection coefficient of 0.1 means for a genotype.</li>
-                <li>Give an example of directional selection in nature.</li>
-                <li>Explain why small populations are more affected by genetic drift than large populations.</li>
+            <ol class="checkpoints topic3">
+                <li>What does a selection coefficient s = 0.1 mean for a genotype's fitness?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q1-a1" name="topic3-q1">
+                        <label for="topic3-q1-a1">That genotype has a 10% reduction in fitness relative to the reference (w = 0.9)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q1-a2" name="topic3-q1">
+                        <label for="topic3-q1-a2">The genotype is 90% more fit than others</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q1-a3" name="topic3-q1">
+                        <label for="topic3-q1-a3">The genotype is lethal</label>
+                    </div>
+                </div>
+
+                <li>Which is a classic real-world example of directional selection?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q2-a1" name="topic3-q2">
+                        <label for="topic3-q2-a1">Industrial melanism in peppered moths (darker forms favored in polluted environments)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q2-a2" name="topic3-q2">
+                        <label for="topic3-q2-a2">Stabilizing selection on human birth weight</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q2-a3" name="topic3-q2">
+                        <label for="topic3-q2-a3">Disruptive selection that always reduces variance</label>
+                    </div>
+                </div>
+
+                <li>Why are small populations more affected by genetic drift than large populations?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q3-a1" name="topic3-q3">
+                        <label for="topic3-q3-a1">Random sampling error has a larger proportional effect, so allele frequencies fluctuate more</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q3-a2" name="topic3-q3">
+                        <label for="topic3-q3-a2">Selection is always stronger in small populations</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic3-q3-a3" name="topic3-q3">
+                        <label for="topic3-q3-a3">Mutation rates increase as population size decreases</label>
+                    </div>
+                </div>
             </ol>
         </section>
 
         <section id="phylogenetics" class="section">
             <h2>Phylogenetics & Tree Building</h2>
-            <p>Phylogenetics reconstructs evolutionary relationships between species (or genes) using shared traits, which can be morphological or molecular. Key concepts include homology (shared ancestry) and analogy (convergent similarity).</p>
+            <p>Phylogenetics reconstructs evolutionary relationships — who is more closely related to whom — using shared traits (morphological or molecular). A phylogenetic tree is a hypothesis about ancestry and branching order. Homologous traits reflect shared ancestry; analogous traits arise by convergence and can mislead naive analyses.</p>
 
-            <p>Common tree-building methods:</p>
-            <ul>
-                <li>Distance methods (e.g., Neighbor-Joining) — use pairwise distances.</li>
-                <li>Maximum parsimony — finds the tree with minimal character changes.</li>
-                <li>Maximum likelihood / Bayesian inference — use explicit models of sequence evolution (most powerful for molecular data).</li>
-            </ul>
+            <p>Methods range from quick distance-based approaches to rigorous model-based inference (maximum likelihood, Bayesian) that explicitly model how sequences change. Parsimony seeks the tree with the fewest changes; model-based methods weigh different evolutionary scenarios and often give better results for molecular data.</p>
 
             <div class="figure">
                 <img src="static/images/placeholder-tree.png" alt="Placeholder: Example phylogenetic tree (replace with real image)" />
                 <figcaption>Phylogenetic tree (placeholder).</figcaption>
             </div>
 
-            <p>Important: an evolutionary tree's topology (branching order) is the key statement of relationships; branch lengths may represent genetic change or time.</p>
+            <div class="figure">
+                <img src="static/images/placeholder-homology-vs-analogy.png" alt="Placeholder: Homology vs analogy examples" />
+                <figcaption>Homology vs analogy visual (placeholder).</figcaption>
+            </div>
+
+            <p>Important: topology (branching order) is the main message of a tree; branch lengths may encode genetic change or time depending on the analysis.</p>
 
             <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Differentiate between homologous and analogous traits with examples.</li>
-                <li>Explain what parsimony seeks to minimize in tree-building.</li>
-                <li>Describe one advantage of model-based methods (likelihood/Bayesian) over parsimony.</li>
+            <ol class="checkpoints topic4">
+                <li>Which pair correctly matches homologous and analogous traits?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q1-a1" name="topic4-q1">
+                        <label for="topic4-q1-a1">Homologous: mammalian forelimb bones; Analogous: wings of bats vs insects</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q1-a2" name="topic4-q1">
+                        <label for="topic4-q1-a2">Homologous: wings of birds and insects; Analogous: forelimb bones in mammals</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q1-a3" name="topic4-q1">
+                        <label for="topic4-q1-a3">Homologous: any two similar-looking structures; Analogous: any two different-looking structures</label>
+                    </div>
+                </div>
+
+                <li>In parsimony-based tree building, what is being minimized?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q2-a1" name="topic4-q2">
+                        <label for="topic4-q2-a1">The total number of character-state changes (evolutionary steps)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q2-a2" name="topic4-q2">
+                        <label for="topic4-q2-a2">The amount of branch length measured in years</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q2-a3" name="topic4-q2">
+                        <label for="topic4-q2-a3">The number of taxa included in the analysis</label>
+                    </div>
+                </div>
+
+                <li>What is one advantage of model-based (likelihood/Bayesian) methods over parsimony?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q3-a1" name="topic4-q3">
+                        <label for="topic4-q3-a1">They incorporate explicit models of sequence evolution and can account for varying substitution rates</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q3-a2" name="topic4-q3">
+                        <label for="topic4-q3-a2">They always produce simpler trees with fewer branches</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic4-q3-a3" name="topic4-q3">
+                        <label for="topic4-q3-a3">They do not require any assumptions about how sequences evolve</label>
+                    </div>
+                </div>
             </ol>
         </section>
 
         <section id="speciation" class="section">
             <h2>Speciation & Macroevolution</h2>
-            <p>Speciation is the process by which one lineage splits into two reproductively isolated lineages. Modes of speciation:</p>
-            <ul>
-                <li>Allopatric — geographic isolation creates barriers to gene flow.</li>
-                <li>Sympatric — speciation without geographic separation (e.g., polyploidy in plants).</li>
-                <li>Parapatric — adjacent populations diverge due to environmental gradients.</li>
-            </ul>
+            <p>Speciation is the splitting of one lineage into two reproductively isolated lineages. Allopatric speciation occurs when geographic barriers separate populations. Sympatric speciation can occur without physical separation (e.g., polyploidy in plants), and parapatric speciation happens along environmental gradients. Over long timescales these splitting events accumulate into macroevolutionary patterns visible in the fossil record and tree of life.</p>
 
-            <p>Reproductive isolating mechanisms can be prezygotic (behavioral, temporal, mechanical, gametic) or postzygotic (hybrid inviability or sterility).</p>
+            <p>Isolating mechanisms can act before fertilization (prezygotic: behavioral, temporal, mechanical, gametic) or after (postzygotic: reduced hybrid viability or fertility). Speciation often involves an interplay of selection, drift, and changes in mating systems or chromosome number.</p>
+
+            <div class="figure">
+                <img src="static/images/placeholder-speciation.png" alt="Placeholder: Diagram of speciation modes" />
+                <figcaption>Modes of speciation (placeholder).</figcaption>
+            </div>
 
             <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Provide an example of allopatric speciation.</li>
+            <ol class="checkpoints topic5">
+                <li>Which example best illustrates allopatric speciation?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q1-a1" name="topic5-q1">
+                        <label for="topic5-q1-a1">Populations separated by a geographic barrier (e.g., island populations of finches)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q1-a2" name="topic5-q1">
+                        <label for="topic5-q1-a2">Speciation via chromosome doubling within the same area (polyploidy)</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q1-a3" name="topic5-q1">
+                        <label for="topic5-q1-a3">Adjacent populations diverging along an environmental gradient (parapatric)</label>
+                    </div>
+                </div>
+
                 <li>What is polyploidy and how can it cause instant speciation in plants?</li>
-                <li>List two prezygotic isolating mechanisms.</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q2-a1" name="topic5-q2">
+                        <label for="topic5-q2-a1">Chromosome doubling creates individuals reproductively incompatible with parents, causing instant speciation</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q2-a2" name="topic5-q2">
+                        <label for="topic5-q2-a2">A slow accumulation of point mutations over millions of years</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q2-a3" name="topic5-q2">
+                        <label for="topic5-q2-a3">A behavioral change that causes immediate geographic separation</label>
+                    </div>
+                </div>
+
+                <li>Which two are examples of prezygotic isolating mechanisms?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q3-a1" name="topic5-q3">
+                        <label for="topic5-q3-a1">Behavioral isolation and temporal isolation</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q3-a2" name="topic5-q3">
+                        <label for="topic5-q3-a2">Hybrid sterility and hybrid inviability</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic5-q3-a3" name="topic5-q3">
+                        <label for="topic5-q3-a3">Polyploidy and genetic drift</label>
+                    </div>
+                </div>
             </ol>
         </section>
 
         <section id="evidence" class="section">
             <h2>Evidence for Evolution</h2>
-            <p>Multiple independent lines of evidence support evolution:</p>
+            <p>Multiple independent lines of evidence converge on the same conclusion: life has evolved. The fossil record shows transitional forms and changing assemblages through time. Comparative anatomy reveals homologous structures and vestigial traits. Biogeography explains distributions through history and plate tectonics. Molecular biology provides direct measures of relatedness via DNA and protein similarities. Finally, contemporary examples — antibiotic resistance, pesticide resistance, and lab evolution experiments — show evolution happening now.</p>
+
             <ul>
-                <li>Fossil record shows transitional forms and historical change.</li>
-                <li>Comparative anatomy (homologous structures, vestigial traits).</li>
-                <li>Biogeography — distribution of species consistent with evolutionary history.</li>
-                <li>Molecular biology — DNA and protein similarities reveal relatedness; molecular clocks estimate divergence times.</li>
-                <li>Direct observation — antibiotic resistance, pesticide resistance, experimental evolution.</li>
+                <li>Fossils: snapshots of past forms, including transitional morphologies.</li>
+                <li>Comparative anatomy: homologous structures and vestiges tell a story of descent.</li>
+                <li>Molecular data: sequences let us quantify relatedness and timing.</li>
+                <li>Direct observation: rapid evolution in response to strong selective pressures.</li>
             </ul>
 
+            <div class="figure">
+                <img src="static/images/placeholder-fossil.png" alt="Placeholder: Transitional fossil example" />
+                <figcaption>Fossil evidence (placeholder).</figcaption>
+            </div>
+
+            <div class="figure">
+                <img src="static/images/placeholder-molecular.png" alt="Placeholder: Molecular sequence comparison graphic" />
+                <figcaption>Molecular comparisons (placeholder).</figcaption>
+            </div>
+
             <h3>Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Explain how vestigial structures provide evidence for evolution.</li>
+            <ol class="checkpoints topic6">
+                <li>How do vestigial structures provide evidence for evolution?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q1-a1" name="topic6-q1">
+                        <label for="topic6-q1-a1">They are reduced or nonfunctional remnants of structures that were functional in ancestors</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q1-a2" name="topic6-q1">
+                        <label for="topic6-q1-a2">They are examples of newly evolved complex adaptations with no ancestral origin</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q1-a3" name="topic6-q1">
+                        <label for="topic6-q1-a3">They prove that species do not share common ancestors</label>
+                    </div>
+                </div>
+
                 <li>How does molecular sequence data support phylogenetic relationships?</li>
-                <li>Give a recent real-world example of observed evolution.</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q2-a1" name="topic6-q2">
+                        <label for="topic6-q2-a1">More similar DNA/protein sequences indicate more recent common ancestry between taxa</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q2-a2" name="topic6-q2">
+                        <label for="topic6-q2-a2">Sequence similarity is unrelated to evolutionary history</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q2-a3" name="topic6-q2">
+                        <label for="topic6-q2-a3">Only morphological data can reliably infer phylogeny</label>
+                    </div>
+                </div>
+
+                <li>Which is a recent real-world example of observed evolution?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q3-a1" name="topic6-q3">
+                        <label for="topic6-q3-a1">Rapid evolution of antibiotic resistance in bacteria</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q3-a2" name="topic6-q3">
+                        <label for="topic6-q3-a2">Spontaneous generation of complex multicellular animals</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic6-q3-a3" name="topic6-q3">
+                        <label for="topic6-q3-a3">No observed changes in any population over decades</label>
+                    </div>
+                </div>
             </ol>
         </section>
 
         <section id="further" class="section">
             <h2>Further Reading & Resources</h2>
+            <p>If you want to dig deeper, classic textbooks like Futuyma's Evolution and Hartl & Clark's Principles of Population Genetics are excellent. Online resources — NCBI, Tree of Life — and primary literature will expand your view. Practice is key: work Punnett squares, solve Hardy–Weinberg problems, and try building small phylogenetic trees from mock sequence data to see the concepts in action.</p>
+
             <ul>
-                <li>Textbooks: 'Evolution' by Futuyma, 'Principles of Population Genetics' by Hartl & Clark.</li>
-                <li>Online resources: National Center for Biotechnology Information (NCBI), Tree of Life Web Project.</li>
-                <li>Practice: Work Punnett squares, Hardy–Weinberg problems, and simple phylogenetic reconstructions.</li>
+                <li>Textbooks: 'Evolution' by Futuyma; 'Principles of Population Genetics' by Hartl & Clark.</li>
+                <li>Web: NCBI, Tree of Life, educational tutorials on phylogenetics and population genetics.</li>
+                <li>Activities: hands-on Punnett squares, Hardy–Weinberg calculations, simple phylogenetic reconstructions in MEGA or online tools.</li>
             </ul>
 
             <h3>Final Checkpoint</h3>
-            <ol class="checkpoints">
-                <li>Summarize in a paragraph how mutation, selection, drift and migration interact to shape evolution.</li>
-                <li>Describe a small research question you could test in a lab or field project related to evolution.</li>
+            <ol class="checkpoints topic7">
+                <li>Which statement best summarizes how mutation, selection, drift and migration interact to shape evolution?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic7-q1-a1" name="topic7-q1">
+                        <label for="topic7-q1-a1">Mutation introduces variation; selection filters variants by fitness; drift causes random frequency changes (especially in small populations); migration (gene flow) adds or homogenizes alleles between populations</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic7-q1-a2" name="topic7-q1">
+                        <label for="topic7-q1-a2">Only selection matters; mutation, drift and migration are negligible</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic7-q1-a3" name="topic7-q1">
+                        <label for="topic7-q1-a3">Drift always prevents selection from acting</label>
+                    </div>
+                </div>
+
+                <li>Which is a practical, small research question you could test in a lab or field project related to evolution?</li>
+                <div class="answer-container">
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic7-q2-a1" name="topic7-q2">
+                        <label for="topic7-q2-a1">Does exposure to a sublethal antibiotic concentration increase resistance allele frequency in a bacterial culture over 10–20 generations?</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic7-q2-a2" name="topic7-q2">
+                        <label for="topic7-q2-a2">Can you measure Hardy–Weinberg deviations for a visible trait in a local insect population this season?</label>
+                    </div>
+                    <div class="qa-subcontainer">
+                        <input type="radio" id="topic7-q2-a3" name="topic7-q2">
+                        <label for="topic7-q2-a3">Reconstructing the entire vertebrate fossil record to test macroevolutionary theory</label>
+                    </div>
+                </div>
             </ol>
         </section>
+
     </main>
 
     <footer class="page-footer">
@@ -208,5 +531,7 @@
             <p>Created by George Crawford — EvolutionHQ</p>
         </div>
     </footer>
+
+    <script src="static/js/answer-key.js"></script>
 </body>
 </html>

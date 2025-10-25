@@ -9,13 +9,13 @@ html {
 }
 
 :root{
-    --bg: #0f1724;
-    --card: #0b1220;
-    --accent: #396670; /* mint */
-    --accent-2: #735910; /* blue */
-    --muted: #1c2b41;
-    --glass: rgba(255,255,255,0.04);
-    --max-width: 1500px;
+    --color-bg: #0f1724;             /* formerly --bg */
+    --color-card: #0b1220;           /* formerly --card */
+    --color-teal: #396670;           /* formerly --accent */
+    --color-amber: #735910;          /* formerly --accent-2 */
+    --color-muted-blue: #1c2b41;     /* formerly --muted */
+    --glass-overlay: rgba(255,255,255,0.04); /* formerly --glass */
+    --layout-max-width: 1500px;      /* formerly --max-width */
 }
 
 body{
@@ -45,7 +45,7 @@ body{
 
 .container {
     width: 92%;
-    max-width: var(--max-width);
+    max-width: var(--layout-max-width);
     margin: 0 auto;
     padding: 2rem 0;
 }
@@ -57,12 +57,12 @@ body{
 
 .page-header h1 {
     font-size: 2rem;
-    color: var(--accent);
+    color: var(--color-teal);
     letter-spacing: -0.5px;
 }
 
 .page-header .subtitle {
-    color: var(--muted);
+    color: var(--color-muted-blue);
     margin-top: 0.4rem;
 }
 
@@ -75,7 +75,7 @@ body{
 }
 
 .toc h2 {
-    color: var(--accent-2); 
+    color: var(--color-amber); 
     font-size: 1.05rem;
 }
 
@@ -94,9 +94,9 @@ body{
     transform: scale(1.03);
 }
 .toc a {
-    color: var(--accent); 
+    color: var(--color-teal); 
     text-decoration: none;
-    background: var(--glass); 
+    background: var(--glass-overlay); 
     padding:0.35rem 0.6rem; 
     border-radius: 8px; 
     font-size: 0.95rem
@@ -119,7 +119,7 @@ body{
 } 
 
 .section h2 {
-    color:var(--accent-2); 
+    color: var(--color-amber); 
     margin-bottom:0.5rem;
 }
 
@@ -130,6 +130,42 @@ body{
 
 .section ul {
     margin: 0.5rem 0 1rem 1.2rem;
+}
+
+.answer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkpoints input {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin: 5px 0;
+    border: 2px solid #888;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+.checkpoints input[type="radio"]:hover {
+  border-color: #78b1ee;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.checkpoints input[type="radio"]:checked {
+  border-color: #78b1ee;
+  background-color: #78b1ee;
+}
+
+.checkpoints label {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkpoints li {
+    font-weight:600;
 }
 
 .figure {
@@ -149,7 +185,7 @@ body{
 }
 
 .figure figcaption {
-    color: var(--muted);
+    color: var(--color-muted-blue);
     font-size: 0.9rem;
 }
 
@@ -157,7 +193,7 @@ body{
     background: linear-gradient(90deg, rgba(96,165,250,0.06), rgba(94,234,212,0.03));
     padding: 0.6rem;
     border-radius: 8px;
-    color: var(--accent);
+    color: var(--color-teal);
     font-weight: 600;
     display: inline-block;
     margin: 0.45rem 0;
@@ -180,7 +216,7 @@ body{
 }
 
 .page-footer p {
-    color: var(--muted);
+    color: var(--color-muted-blue);
 }
 
 @media (min-width:900px){
