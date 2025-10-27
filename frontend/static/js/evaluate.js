@@ -1,10 +1,23 @@
 function compareColumns() {
     const columnData = {};
-    const columnCount = document.getElementsByClassName('species-name').length;
+    // const columnCount = document.getElementsByClassName('species-name').length;
+    const speciesCount = document.querySelectorAll('th').length - 2;
     const speciesNames = [];
+    let importingData = false;
 
-    for (let col = 1; col <= columnCount; col++) {
-        const speciesName = document.querySelector('.col' + col + ' .species-name').value;
+    for (let col = 1; col <= speciesCount; col++) {
+        const speciesElem = document.querySelector('.col' + col);
+        let speciesName = '';
+
+        if (speciesElem.children.length > 0 && speciesElem.children[0].tagName === 'INPUT') {
+            speciesName = speciesElem.children[0].value.trim();
+            console.log(speciesName);
+        } else {
+            importingData = true;
+            speciesName = speciesElem.innerText.trim();
+            console.log(speciesName);
+        }
+
         speciesNames.push(speciesName);
         columnData[speciesName] = [];
     }
@@ -14,8 +27,21 @@ function compareColumns() {
     }
 
     const statusMessage = document.querySelector('.status-message');
-    const binaries = document.querySelectorAll('.binary');
-    const binaryArr = Array.from(binaries).map(input => input.value);
+
+    let binaries = [];
+    let binaryArr = [];
+    if (!importingData) {
+        binaries = Array.from(document.querySelectorAll('.binary'));
+        binaryArr = binaries.map(input => input.value.trim());
+    } else {
+        const dataRows = document.querySelectorAll('[class*="row"]');
+        dataRows.forEach(row => {
+            const rowBinaries = Array.from(row.children).slice(2);
+            binaries.push(...rowBinaries);
+        });
+        binaryArr = binaries.map(el => el.innerText.trim());
+    }
+
     const areEmptyBinaries = binaryArr.some(binary => binary === ""); // Remove?
     const areNonBinaries = binaryArr.some(binary => binary !== "1" && binary !== "0" && binary !== "");
     const referenceSpecies = document.getElementById('reference').value;
@@ -46,15 +72,28 @@ function compareColumns() {
     }
 
     binaries.forEach(binary => {
-        if (binary.value === "") {
-            binary.value = 0;
+        if (!importingData) {
+            if (binary.value === "") {
+                binary.value = 0;
+            }
+        } else {
+            if (binary.innerText === "") {
+                binary.innerText = 0;
+            }
         }
     });
 
     const rowCount = document.querySelectorAll('tr').length - 1;
-    for (let col = 1; col <= columnCount; col++) {
+    for (let col = 1; col <= speciesCount; col++) {
         for (let row = 1; row <= rowCount; row++) {
-            const binary = document.querySelector('.row' + row + ' td:nth-of-type(' + (col + 2) + ') .binary').value;
+
+            let binary = '';
+            if (!importingData) {
+                binary = document.querySelector('.row' + row + ' td:nth-of-type(' + (col + 2) + ') .binary').value.trim();
+            } else {
+                binary = document.querySelector('.row' + row + ' td:nth-of-type(' + (col + 2) + ')').innerText.trim();
+            }
+            // const binary = document.querySelector('.row' + row + ' td:nth-of-type(' + (col + 2) + ') .binary').value;
             const speciesName = speciesNames[col - 1];
             columnData[speciesName].push(binary);
         }
@@ -186,6 +225,7 @@ function upgma(distanceMatrix) {
 }
 
 function renderTree(newickStr, referenceSpecies) {
+    document.querySelector('.tree-results p').style.display = 'none';
     document.querySelector('.tree-container').innerHTML = '';
     document.querySelector('.tree-results').style.display = 'flex';
     document.querySelector('.save-tree').style.visibility = 'visible';

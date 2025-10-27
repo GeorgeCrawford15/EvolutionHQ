@@ -244,40 +244,30 @@ button:hover {
     font-weight: 400;
 }
 
-.credit {
-    background-color: rgb(236, 236, 236);
-    width: fit-content;
-    font-size: 1.5rem;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+.tree-results h1 {
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 50px;
+    color: #334155;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
 }
 
-.credit .links {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.credit a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    margin-top: 10px;
-}
-
-.credit a:hover {
-    color: #3b82f6;
-    text-decoration: underline;
+.tree-results p {
+    text-align: center;
+    margin-top: 100px;
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
 .tree-results {
     width: 70%;
+    overflow: auto;
     margin-left: auto;
     margin-right: auto;
-    display: none;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;

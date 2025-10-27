@@ -152,33 +152,47 @@ document.getElementById('csv-upload').addEventListener('change', function(event)
     const file = event.target.files[0];
     Papa.parse(file, {
         complete: function(results) {
-            console.log(results.data);
             populateMatrix(results.data);
         }
     });
+
+    document.querySelector('.buttons').style.display = 'none';
 });
 
 function populateMatrix(data) {
-    const dataRows = document.querySelectorAll('[class*="row"]');
-    dataRows.forEach(el => el.remove());
+    const desiredSpecies = data[0].length - 2;
+    const desiredRows = data.length - 1;
 
-    const speciesNames = Array.from(document.getElementById('top-row').children);
-    console.log(speciesNames);
-    speciesCount = speciesNames.length - 4;
-    data.forEach((row, rowIndex) => {
-        console.log(row, rowIndex);
-        row.forEach((cell, cellIndex) => {
-            if (rowIndex === 0 && cellIndex !== 0 && cellIndex !== 1) {
-                for (let i = 2; i < speciesNames.length; i++) {
-                    const th = speciesNames[cellIndex];
-                    th.innerText = cell;
-                }
-            } else {
-                addRow();
-            }
-        });
-    });
-    speciesNames.forEach(name => {
-        if (name.innerText === '') name.remove();
-    });
+    const topRow = document.getElementById('top-row');
+    const tableBody = document.querySelector('tbody');
+    console.log(topRow, tableBody);
+
+    while (topRow.children.length > 2) {
+        topRow.removeChild(topRow.lastElementChild);
+    }
+
+    /*if (tableBody.children.length > 0) {
+        tableBody.removeChild(tableBody.lastElementChild);
+    }*/
+
+    while (tableBody.children.length > 0) {
+        tableBody.removeChild(tableBody.lastElementChild);
+    }
+
+    rowCount = 0;
+    speciesCount = 0;
+    for (let i = 0; i < desiredSpecies; i++) addColumn();
+    for (let i = 0; i < desiredRows; i++) addRow();
+
+    const cols = Array.from(topRow.children);
+    for (let i = 2; i < cols.length; i++) {
+        cols[i].innerText = data[0][i];
+    }
+
+    const rows = Array.from(tableBody.children);
+    for (let i = 0; i < rows.length; i++) {
+        for (let j = 0; j < cols.length; j++) {
+            rows[i].children[j].innerText = data[i + 1][j];
+        }
+    }
 }
