@@ -41,8 +41,8 @@ The project combines a **modern frontend** (HTML, CSS, JavaScript) with a **Pyth
   - Toggle between monohybrid and dihybrid cross sections.  
 
 - **Production-ready API**  
-  - Flask backend hosted on [Render](https://render.com) for dynamic calculations.  
-  - Frontend hosted on [Vercel](https://vercel.com) for fast, static delivery.  
+  - Flask backend hosted on Fly.io for dynamic calculations.  
+  - Frontend hosted on Vercel for fast, static delivery.  
 
 ---
 
@@ -52,5 +52,5 @@ The project combines a **modern frontend** (HTML, CSS, JavaScript) with a **Pyth
 |-----------------|----------------------------|
 | Frontend        | HTML, CSS, JavaScript      |
 | Backend         | Python, Flask              |
-| Hosting         | Vercel (frontend), Render (backend) |
+| Hosting         | Vercel (frontend), Fly.io (backend) |
 | CORS Management | `flask-cors`               |

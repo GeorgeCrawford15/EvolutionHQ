@@ -49,14 +49,19 @@
 
             <p>Punnett squares are a quick way to visualize how parental alleles combine. For example, Aa × Aa produces AA, Aa, Aa, aa genotypes — a predictable 1:2:1 genotypic ratio even as phenotypes depend on dominance relationships.</p>
 
-            <div class="figure">
-                <img src="static/images/Punnett_Square_(Green_Dominant).png" alt="Punnett square diagram">
-                <figcaption>Punnett square: monohybrid Gg × gg.</figcaption>
-            </div>
-
-            <div class="figure">
-                <img src="static/images/Incomplete_dominance.png" alt="Incomplete dominance diagram">
-                <figcaption>Allele interactions: incomplete dominance.</figcaption>
+            <div class="figure-container">
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/Punnett_Square_(Green_Dominant).png" alt="Punnett square diagram" />
+                    </div>
+                    <figcaption>Punnett square: monohybrid Gg × gg.</figcaption>
+                </div>
+                <div class="figure">
+                    <div class="img-container">
+                        <img id="incomplete-dom-img" src="static/images/Incomplete_dominance.png" alt="Incomplete dominance diagram" />
+                    </div>
+                    <figcaption>Allele interactions: incomplete dominance.</figcaption>
+                </div>
             </div>
 
             <h3>Extensions</h3>
@@ -140,8 +145,10 @@
             <p>Why it matters: use Hardy–Weinberg to estimate carrier frequencies from phenotypes (e.g., if q² is known), and as a statistical baseline — significant departure suggests evolution at that locus. Remember assumptions — reality often violates one or more, which is why the model is practically useful.</p>
 
             <div class="figure">
-                <img src="static/images/placeholder-hardy-weinberg.png" alt="Placeholder: Illustration showing allele frequencies across generations">
-                <figcaption>Hardy–Weinberg as a baseline model (placeholder).</figcaption>
+                <div class="img-container">
+                    <img src="static/images/allele_freq.png" alt="Illustration showing allele frequencies across generations" />
+                </div>
+                <figcaption>Hardy–Weinberg as a baseline model.</figcaption>
             </div>
 
             <h4>Worked example</h4>
@@ -205,14 +212,19 @@
 
             <p>Selection comes in flavors: directional (favors one extreme), stabilizing (favors intermediates), and disruptive (favors extremes). Real-world adaptation is a balance between selection, mutation creating raw material, gene flow mixing variation, and drift introducing chance.</p>
 
-            <div class="figure">
-                <img src="static/images/placeholder-selection.png" alt="Placeholder: Graph showing directional/stabilizing/disruptive selection">
-                <figcaption>Modes of selection (placeholder).</figcaption>
-            </div>
-
-            <div class="figure">
-                <img src="static/images/placeholder-adaptation-example.png" alt="Placeholder: Example adaptation such as beak variation in birds">
-                <figcaption>Example adaptation in nature (placeholder).</figcaption>
+            <div class="figure-container">
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/selection_types.png" alt="Graph showing directional/stabilizing/disruptive selection" />
+                    </div>
+                    <figcaption>Modes of selection.</figcaption>
+                </div>
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/bird_beaks.png" alt="Example adaptation such as beak variation in birds">
+                    </div>
+                    <figcaption>Example adaptation in nature.</figcaption>
+                </div>
             </div>
 
             <h3>Checkpoint</h3>
@@ -273,14 +285,19 @@
 
             <p>Methods range from quick distance-based approaches to rigorous model-based inference (maximum likelihood, Bayesian) that explicitly model how sequences change. Parsimony seeks the tree with the fewest changes; model-based methods weigh different evolutionary scenarios and often give better results for molecular data.</p>
 
-            <div class="figure">
-                <img src="static/images/placeholder-tree.png" alt="Placeholder: Example phylogenetic tree (replace with real image)" />
-                <figcaption>Phylogenetic tree (placeholder).</figcaption>
-            </div>
-
-            <div class="figure">
-                <img src="static/images/placeholder-homology-vs-analogy.png" alt="Placeholder: Homology vs analogy examples" />
-                <figcaption>Homology vs analogy visual (placeholder).</figcaption>
+            <div class="figure-container">
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/phylogenetic_tree.png" alt="Example phylogenetic tree" />
+                    </div>
+                    <figcaption>Phylogenetic tree.</figcaption>
+                </div>
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/homologous_v_analagous.png" alt="Homology vs analogy examples" />
+                    </div>
+                    <figcaption>Homology vs analogy visual.</figcaption>
+                </div>
             </div>
 
             <p>Important: topology (branching order) is the main message of a tree; branch lengths may encode genetic change or time depending on the analysis.</p>
@@ -344,8 +361,10 @@
             <p>Isolating mechanisms can act before fertilization (prezygotic: behavioral, temporal, mechanical, gametic) or after (postzygotic: reduced hybrid viability or fertility). Speciation often involves an interplay of selection, drift, and changes in mating systems or chromosome number.</p>
 
             <div class="figure">
-                <img src="static/images/placeholder-speciation.png" alt="Placeholder: Diagram of speciation modes" />
-                <figcaption>Modes of speciation (placeholder).</figcaption>
+                <div class="img-container">
+                    <img src="static/images/speciation_modes.png" alt="Diagram of speciation modes" />
+                </div>
+                <figcaption>Modes of speciation.</figcaption>
             </div>
 
             <h3>Checkpoint</h3>
@@ -411,14 +430,19 @@
                 <li>Direct observation: rapid evolution in response to strong selective pressures.</li>
             </ul>
 
-            <div class="figure">
-                <img src="static/images/placeholder-fossil.png" alt="Placeholder: Transitional fossil example" />
-                <figcaption>Fossil evidence (placeholder).</figcaption>
-            </div>
-
-            <div class="figure">
-                <img src="static/images/placeholder-molecular.png" alt="Placeholder: Molecular sequence comparison graphic" />
-                <figcaption>Molecular comparisons (placeholder).</figcaption>
+            <div class="figure-container">
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/fossil.png" alt="Transitional fossil example" />
+                    </div>
+                    <figcaption>Fossil evidence.</figcaption>
+                </div>
+                <div class="figure">
+                    <div class="img-container">
+                        <img src="static/images/molecular_seq_comparison.png" alt="Molecular sequence comparison graphic" />
+                    </div>
+                    <figcaption>Molecular comparisons.</figcaption>
+                </div>
             </div>
 
             <h3>Checkpoint</h3>
