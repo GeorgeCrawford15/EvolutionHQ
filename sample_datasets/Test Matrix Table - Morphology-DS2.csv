@@ -1,0 +1,22 @@
+Char,Char State,Species A,Species B,Species C,Species D,Species E,Species F,Species G,Species H,Species I,Species J
+Body Symmetry,Radial symmetry,,,1,,,,,,,
+Body Symmetry,Bilateral symmetry,1,1,,1,1,1,1,1,1,1
+Skeletal Type,Hydrostatic skeleton,,,1,,,,,,,
+Skeletal Type,Exoskeleton (chitinous),1,1,,1,1,,,1,1,1
+Digestive System,Complete gut (mouth to anus),1,1,1,1,,1,1,1,1,1
+Digestive System,Incomplete gut (single opening),,,,,1,,,,,
+Segmentation,Segmented body plan (metamerism),1,1,,1,1,1,1,1,1,1
+Segmentation,Non-segmented body,,,1,,,,,,,
+Circulatory System,Open circulatory system,,1,,1,1,1,1,,,
+Circulatory System,Closed circulatory system,1,,,,,,,1,1,1
+Nervous System,Cephalization (distinct head),1,1,,1,1,1,1,1,1,1
+Nervous System,Nerve net only,,,1,,,,,,,
+Reproduction,Sexual reproduction,1,1,1,1,1,1,1,1,1,1
+Reproduction,Asexual budding present,,,1,,,1,,,,
+Development,Deuterostome development,1,,,,,,,1,,1
+Development,Protostome development,,1,,1,1,1,1,,1,
+Limbs,Jointed appendages (3+ pairs),,1,,1,1,1,,,1,
+Limbs,Absence of jointed limbs,1,,1,,,,1,1,,1
+Gas Exchange,Tracheal system present,,,,1,1,,,,,
+Gas Exchange,Gills present,,1,,,,1,,,1,
+Gas Exchange,Cutaneous (skin) respiration,1,,1,,,,1,1,,1

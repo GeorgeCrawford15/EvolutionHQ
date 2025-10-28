@@ -25,7 +25,7 @@ The project combines a **modern frontend** (HTML, CSS, JavaScript) with a **Pyth
   - Displays offspring in a Punnett square format with ratios.  
 
 - **Matrix Table**
-  - Input or upload data from a CSV file.
+  - Input or upload data from a CSV file (download one of the sample CSV datasets in `sample_datasets/` to try it out!).
   - Generates insights about most closely related species.
 
 - **Phylogenetic Tree Generator**
@@ -42,7 +42,7 @@ The project combines a **modern frontend** (HTML, CSS, JavaScript) with a **Pyth
 
 - **Production-ready API**  
   - Flask backend hosted on Fly.io for dynamic calculations.  
-  - Frontend hosted on Vercel for fast, static delivery.  
+  - Frontend hosted on Vercel for fast, static delivery.
 
 ---
 

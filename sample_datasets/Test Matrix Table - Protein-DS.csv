@@ -1,0 +1,15 @@
+Char,Char State,Species A,Species B,Species C,Species D,Species E,Species F,Species G,Species H,Species I,Species J
+Metabolic Pathway,Presence of Citrate Synthase isoform A,1,1,1,,1,1,1,1,1,1
+Metabolic Pathway,Presence of Citrate Synthase isoform B,,,,1,,,,,,
+Photosynthesis,Expression of RuBisCO large subunit (Form I),,,,1,1,1,1,1,,1
+Photosynthesis,Expression of RuBisCO large subunit (Form II),1,1,1,,,,,,1,
+Enzyme Structure,Presence of specific ATP Synthase subunit epsilon,1,,1,,1,,1,,1,
+Enzyme Structure,Absence of ATP Synthase subunit epsilon,,1,,1,,1,,1,,1
+Signaling Protein,Presence of Receptor Tyrosine Kinase (RTK) gene,1,1,1,,1,1,1,1,,1
+Signaling Protein,Presence of G Protein-Coupled Receptor (GPCR) gene,1,1,1,1,1,1,1,1,1,1
+Transport Protein,High affinity for Na+/K+ pump (Isoform alpha),1,1,,1,1,,1,1,,1
+Transport Protein,Low affinity for Na+/K+ pump (Isoform beta),,,1,,,1,,,1,
+Hormone Receptors,Presence of Steroid Hormone Receptor (Cytoplasmic),1,,1,1,,1,,1,,1
+Hormone Receptors,Presence of Peptide Hormone Receptor (Membrane),1,1,1,1,1,1,1,1,1,1
+Immunological Marker,Presence of Major Histocompatibility Complex (MHC) analogue,1,1,,,,1,1,1,,1
+Immunological Marker,Absence of MHC analogue,,,1,1,1,,,,1,

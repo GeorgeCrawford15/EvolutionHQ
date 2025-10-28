@@ -1,0 +1,20 @@
+Char,Char State,Species A,Species B,Species C,Species D,Species E,Species F,Species G,Species H,Species I,Species J,Species K,Species L,Species M,Species N
+Arms,Long,1,0,0,0,1,0,0,0,1,0,0,0,1,0
+Arms,Short,0,0,0,0,0,0,1,1,0,0,0,0,0,1
+Arms,Paddles,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+Hands,Fingers,0,1,1,1,0,1,0,0,0,0,0,1,0,0
+Hands,Claws,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+Body,Spherical,1,0,0,0,0,0,0,0,1,0,0,0,1,0
+Body,Long,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+Back pattern,Light dots,1,0,0,0,1,0,1,1,1,0,0,0,1,1
+Back pattern,Dark dots,0,1,1,1,0,1,0,0,0,0,0,1,0,0
+Back pattern,Blobs,0,1,1,1,0,1,0,0,0,0,0,1,0,0
+Eyes,Attached to head,1,1,1,1,1,1,0,0,1,0,0,1,1,0
+Eyes,Wide-eyed stocks,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Eyes,Close-eyed stocks,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Eyes,One eye,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+Feet,Present,1,1,0,1,0,1,0,0,1,0,0,1,1,0
+Feet,Fused,1,0,0,0,0,0,0,0,1,0,0,0,1,0
+Feet,Toes,0,1,0,0,0,1,0,0,0,0,0,1,0,0
+Neck,Present,1,1,0,0,1,1,1,1,1,1,1,1,1,1
+Hair,Present,0,1,0,0,0,1,0,0,0,0,0,0,0,0

@@ -270,7 +270,7 @@ body{
         flex-direction: column;
     }
     .img-container {
-        width: 400px;
+        width: 70vw;
     }
     .figure img {
         max-width: 100%;

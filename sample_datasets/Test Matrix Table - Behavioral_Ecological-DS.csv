@@ -1,0 +1,17 @@
+Char,Char State,Species A,Species B,Species C,Species D,Species E,Species F,Species G,Species H,Species I,Species J
+Reproductive Strategy,Oviparous (Egg-laying),1,,1,1,,1,,1,1,
+Reproductive Strategy,Viviparous (Live birth),,1,,,1,,1,,,1
+Mating System,Monogamous pair bond established,,1,,,1,,,,,1
+Mating System,Promiscuous or solitary mating,1,,1,1,,1,1,1,1,
+Habitat Niche,Arboreal (Tree-dwelling),,1,,,,1,1,,,
+Habitat Niche,Terrestrial (Ground-dwelling),1,,1,1,1,,,1,1,1
+Diet Type,Strict Herbivore,,,1,,,1,,,,
+Diet Type,Omnivore (Plants and Animals),1,1,,1,1,,1,1,1,1
+Behavior,Nocturnal activity pattern,,1,,,,,1,,,1
+Behavior,Diurnal activity pattern,1,,1,1,1,1,,1,1,
+Social Structure,"Form complex, persistent social groups",,1,,,,,,,,1
+Social Structure,Solitary or temporary groups only,1,,1,1,1,1,1,1,1,
+Life Cycle,Complete metamorphosis present,1,,1,,,1,,,,
+Life Cycle,Direct development (no larval stage),,1,,1,1,,1,1,1,1
+Predator Defense,Aposematic coloration (warning colors),1,,,1,,,,1,,
+Predator Defense,Crypsis (Camouflage),,1,1,,1,1,1,,1,1
