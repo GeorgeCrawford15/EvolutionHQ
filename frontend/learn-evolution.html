@@ -33,21 +33,29 @@
     <main class="container content">
         <section id="overview" class="section">
             <h2>Overview</h2>
-            <p>Evolution is the story of life changing through time: populations gradually shift in their traits because of variation, heredity, and differential success. Think of populations as decks of cards (the gene pool) — shuffling, drawing, and swapping cards over generations produces new combinations of traits. The main processes that shuffle and sort those cards are mutation (new cards), natural selection (which cards win the game), genetic drift (random shuffling), migration/gene flow (cards moving between decks), and recombination (mixing cards during reproduction).</p>
+            <p>Evolution is the ongoing story of how life changes over time. Populations slowly shift in their traits as a result of three key ingredients: variation among individuals, the inheritance of traits, and differences in survival and reproduction. You can imagine a population as a deck of cards (the gene pool) where shuffling, drawing, and swapping cards over generations produces new combinations of traits. The processes that shuffle and sort these cards include:</p>
 
-            <p>Big idea: evolution does not have a direction or final goal — it is a continual response to environments, constraints, and chance. The modern synthesis connects Darwin's natural selection to Mendel's genetics so we can predict how allele frequencies change over time.</p>
+            <ul>
+                <li><strong>Mutation:</strong> The source of new cards, creating novel traits that may appear in a population for the first time.</li>
+                <li><strong>Natural selection:</strong> The rules of the game, determining which cards give an advantage in a given environment and are more likely to be passed on.</li>
+                <li><strong>Genetic drift:</strong> Random changes in which cards get passed on, especially important in small populations where chance can outweigh selection.</li>
+                <li><strong>Migration/gene flow:</strong> Cards moving between decks, mixing genetic material from different populations and introducing new variation.</li>
+                <li><strong>Recombination:</strong> The mixing of cards during reproduction, creating novel combinations of traits in offspring.</li>
+            </ul>
+
+            <p><strong>Big idea:</strong> Evolution has no ultimate direction or final goal. It is a continuous process driven by the environment, biological constraints, and chance events. The modern synthesis combines Darwin’s ideas about natural selection with Mendel’s principles of heredity, giving us a framework to understand and predict how allele frequencies in populations change over time.</p>
         </section>
 
         <section id="mendelian" class="section">
             <h2>Mendelian Genetics</h2>
-            <p>Gregor Mendel discovered that traits are passed as discrete units (genes) and that each individual carries two versions (alleles) of a gene. Simple Mendelian inheritance makes predictions about offspring when alleles interact in predictable ways. Dominant alleles mask recessive ones in a heterozygote; codominance and incomplete dominance are variants where both alleles influence the phenotype.</p>
+            <p>Gregor Mendel showed that traits are passed as discrete units called genes, and that each individual carries two versions of a gene, known as alleles. These alleles can interact in predictable ways, which allows simple Mendelian inheritance to make clear predictions about offspring. In most cases, a dominant allele will mask the effect of a recessive allele in a heterozygous individual. There are also variations such as codominance, where both alleles contribute to the phenotype equally, and incomplete dominance, where the heterozygote shows an intermediate trait.</p>
 
             <ul>
-                <li>Alleles and genotype: two copies per individual, inherited one from each parent.</li>
-                <li>Dominance patterns: complete dominance, incomplete dominance, codominance — each produces distinct phenotypic outcomes.</li>
+                <li><strong>Alleles and genotype:</strong> Each individual carries two alleles for every gene, one inherited from each parent. The combination of these alleles is called the genotype.</li>
+                <li><strong>Dominance patterns:</strong> Complete dominance, incomplete dominance, and codominance produce different phenotypic outcomes based on how alleles interact.</li>
             </ul>
 
-            <p>Punnett squares are a quick way to visualize how parental alleles combine. For example, Aa × Aa produces AA, Aa, Aa, aa genotypes — a predictable 1:2:1 genotypic ratio even as phenotypes depend on dominance relationships.</p>
+            <p>Punnett squares provide a simple visual way to predict how parental alleles combine in offspring. For instance, a cross between two heterozygotes (Aa × Aa) will produce the genotypes AA, Aa, Aa, and aa in a 1:2:1 ratio. The resulting phenotypes depend on the dominance relationships of the alleles, allowing us to anticipate which traits are likely to appear in the next generation.</p>
 
             <div class="figure-container">
                 <div class="figure">
@@ -137,12 +145,15 @@
 
         <section id="hardy-weinberg" class="section">
             <h2>Hardy–Weinberg Equilibrium & Allele Frequencies</h2>
-            <p>Hardy–Weinberg is a null model: if nothing interesting is happening (no selection, mutation, migration, drift, and mating is random), allele and genotype frequencies stay constant. For a simple two-allele system, p and q describe allele frequencies and p², 2pq, q² predict genotype frequencies. Deviations from the prediction indicate that evolutionary forces are acting.</p>
+            <p>Hardy–Weinberg equilibrium provides a simple null model for understanding populations. It shows what happens to allele and genotype frequencies when nothing unusual is occurring. Specifically, if there is no natural selection, mutation, migration, or genetic drift, and if mating is random, the frequencies of alleles and genotypes remain constant from one generation to the next. This makes it a useful baseline for detecting evolution.</p>
+
+            <p>In a system with two alleles, the frequencies of each allele are represented by <strong>p</strong> and <strong>q</strong>. The expected genotype frequencies can then be predicted using the formulas <strong>p²</strong> for the homozygous dominant, <strong>2pq</strong> for the heterozygote, and <strong>q²</strong> for the homozygous recessive. If the observed genotype frequencies deviate from these predictions, it is a signal that one or more evolutionary forces are acting on the population.</p>
 
             <div class="formula">p + q = 1</div>
             <div class="formula">p<sup>2</sup> + 2pq + q<sup>2</sup> = 1</div>
 
-            <p>Why it matters: use Hardy–Weinberg to estimate carrier frequencies from phenotypes (e.g., if q² is known), and as a statistical baseline — significant departure suggests evolution at that locus. Remember assumptions — reality often violates one or more, which is why the model is practically useful.</p>
+            <p><strong>Why it matters:</strong> Hardy–Weinberg is commonly used to estimate the frequency of carriers for a recessive trait when the prevalence of the trait is known. It also serves as a statistical baseline: if observed frequencies differ significantly from expected values, it suggests that evolution is occurring at that gene. Keep in mind that the model relies on assumptions that are rarely met completely in real populations, which is why it is most useful as a conceptual and analytical tool rather than a literal description of natural populations.</p>
+
 
             <div class="figure">
                 <div class="img-container">
@@ -208,9 +219,11 @@
 
         <section id="selection" class="section">
             <h2>Natural Selection & Adaptation</h2>
-            <p>Natural selection is the non-random increase of beneficial traits. Individuals do not evolve — populations do, as heritable trait variants that increase survival or reproduction rise in frequency. Fitness (w) quantifies reproductive success; the selection coefficient (s) describes how much less fit a genotype is relative to a reference (w = 1 − s).</p>
+            <p>Natural selection is the process by which traits that improve survival or reproduction become more common in a population over time. Evolution acts on populations, not individuals, because heritable differences among individuals determine which traits are passed to the next generation. Traits that increase fitness are more likely to be transmitted, while less advantageous traits may decline. Fitness, represented as <strong>w</strong>, measures an individual's reproductive success. The selection coefficient, <strong>s</strong>, quantifies how much less fit a genotype is compared to a reference genotype, using the formula <strong>w = 1 − s</strong>.</p>
 
-            <p>Selection comes in flavors: directional (favors one extreme), stabilizing (favors intermediates), and disruptive (favors extremes). Real-world adaptation is a balance between selection, mutation creating raw material, gene flow mixing variation, and drift introducing chance.</p>
+            <p>Natural selection can act in several distinct ways. <strong>Directional selection</strong> favors one extreme of a trait, causing the population average to shift. <strong>Stabilizing selection</strong> favors intermediate traits, reducing variation and maintaining the status quo. <strong>Disruptive selection</strong> favors individuals at both extremes, which can increase variation and sometimes lead to the formation of distinct subpopulations.</p>
+
+            <p>Adaptation in real populations reflects a dynamic balance between natural selection and other evolutionary forces. Mutation provides new genetic variants, gene flow introduces variation from other populations, and genetic drift produces random changes, especially in small populations. Together, these processes shape how populations evolve and adapt to changing environments over time.</p>
 
             <div class="figure-container">
                 <div class="figure">
@@ -281,9 +294,11 @@
 
         <section id="phylogenetics" class="section">
             <h2>Phylogenetics & Tree Building</h2>
-            <p>Phylogenetics reconstructs evolutionary relationships — who is more closely related to whom — using shared traits (morphological or molecular). A phylogenetic tree is a hypothesis about ancestry and branching order. Homologous traits reflect shared ancestry; analogous traits arise by convergence and can mislead naive analyses.</p>
+            <p><strong>Phylogenetics</strong> is the study of evolutionary relationships, helping us understand which species or populations are more closely related. Researchers use shared traits, which can be <strong>morphological</strong> (physical features) or <strong>molecular</strong> (DNA, RNA, or protein sequences), to reconstruct these relationships. A <strong>phylogenetic tree</strong> is a diagram that represents a hypothesis about <strong>ancestry</strong> and the order in which lineages diverged. Traits that are <strong>homologous</strong> reflect shared ancestry, while <strong>analogous</strong> traits, which arise independently through <strong>convergent evolution</strong>, can sometimes mislead analyses if not recognized.</p>
 
-            <p>Methods range from quick distance-based approaches to rigorous model-based inference (maximum likelihood, Bayesian) that explicitly model how sequences change. Parsimony seeks the tree with the fewest changes; model-based methods weigh different evolutionary scenarios and often give better results for molecular data.</p>
+            <p>There are several methods for building phylogenetic trees. Quick, <strong>distance-based</strong> approaches estimate relationships based on overall similarity, while more rigorous <strong>model-based</strong> methods, such as <strong>maximum likelihood</strong> and <strong>Bayesian inference</strong>, explicitly model how sequences evolve over time. <strong>Parsimony</strong> seeks the tree that requires the fewest evolutionary changes, assuming simplicity. Model-based methods, by weighing different evolutionary scenarios and accounting for rates of change, often produce more accurate trees when working with molecular data.</p>
+
+            <p>Understanding phylogenetics allows scientists to trace the evolutionary history of life, identify patterns of <strong>diversification</strong>, and make predictions about traits in species that have not been directly studied. By carefully choosing traits and methods, researchers can minimize errors caused by convergence and other confounding factors.</p>
 
             <div class="figure-container">
                 <div class="figure">
@@ -356,9 +371,11 @@
 
         <section id="speciation" class="section">
             <h2>Speciation & Macroevolution</h2>
-            <p>Speciation is the splitting of one lineage into two reproductively isolated lineages. Allopatric speciation occurs when geographic barriers separate populations. Sympatric speciation can occur without physical separation (e.g., polyploidy in plants), and parapatric speciation happens along environmental gradients. Over long timescales these splitting events accumulate into macroevolutionary patterns visible in the fossil record and tree of life.</p>
+            <p><strong>Speciation</strong> is the process by which one lineage splits into two or more reproductively isolated lineages. Geographic separation often drives this process, called <strong>allopatric speciation</strong>, where physical barriers like mountains or rivers prevent gene flow. Speciation can also occur without physical separation. In <strong>sympatric speciation</strong>, new species arise within the same area, such as through polyploidy in plants. <strong>Parapatric speciation</strong> occurs along environmental gradients. Over long timescales, repeated speciation events generate the <strong>macroevolutionary patterns</strong> we see in the fossil record and the tree of life.</p>
 
-            <p>Isolating mechanisms can act before fertilization (prezygotic: behavioral, temporal, mechanical, gametic) or after (postzygotic: reduced hybrid viability or fertility). Speciation often involves an interplay of selection, drift, and changes in mating systems or chromosome number.</p>
+            <p><strong>Reproductive isolation</strong> is maintained by mechanisms that prevent gene flow. <strong>Prezygotic barriers</strong> act before fertilization (behavioral, temporal, mechanical, or gametic), while <strong>postzygotic barriers</strong> act after fertilization, reducing hybrid viability or fertility. New species often arise through a mix of <strong>selection</strong>, <strong>drift</strong>, and changes in mating systems or chromosome number.</p>
+
+            <p>Studying speciation and macroevolution helps explain the <strong>diversity of life</strong> and how species originate and diverge over time.</p>
 
             <div class="figure">
                 <div class="img-container">
@@ -421,13 +438,13 @@
 
         <section id="evidence" class="section">
             <h2>Evidence for Evolution</h2>
-            <p>Multiple independent lines of evidence converge on the same conclusion: life has evolved. The fossil record shows transitional forms and changing assemblages through time. Comparative anatomy reveals homologous structures and vestigial traits. Biogeography explains distributions through history and plate tectonics. Molecular biology provides direct measures of relatedness via DNA and protein similarities. Finally, contemporary examples — antibiotic resistance, pesticide resistance, and lab evolution experiments — show evolution happening now.</p>
+            <p>Multiple independent lines of evidence converge on the same conclusion: <strong>life has evolved</strong>. The <strong>fossil record</strong> shows transitional forms and changing assemblages through time. <strong>Comparative anatomy</strong> reveals homologous structures and vestigial traits. <strong>Biogeography</strong> explains distributions through history and plate tectonics. <strong>Molecular biology</strong> provides direct measures of relatedness via DNA and protein similarities. Finally, contemporary examples — such as antibiotic resistance, pesticide resistance, and lab evolution experiments — show evolution happening today.</p>
 
             <ul>
-                <li>Fossils: snapshots of past forms, including transitional morphologies.</li>
-                <li>Comparative anatomy: homologous structures and vestiges tell a story of descent.</li>
-                <li>Molecular data: sequences let us quantify relatedness and timing.</li>
-                <li>Direct observation: rapid evolution in response to strong selective pressures.</li>
+                <li><strong>Fossils:</strong> snapshots of past forms, including transitional morphologies.</li>
+                <li><strong>Comparative anatomy:</strong> homologous structures and vestiges tell a story of descent.</li>
+                <li><strong>Molecular data:</strong> sequences let us quantify relatedness and timing.</li>
+                <li><strong>Direct observation:</strong> rapid evolution in response to strong selective pressures.</li>
             </ul>
 
             <div class="figure-container">
@@ -499,12 +516,14 @@
 
         <section id="further" class="section">
             <h2>Further Reading & Resources</h2>
-            <p>If you want to dig deeper, classic textbooks like Futuyma's Evolution and Hartl & Clark's Principles of Population Genetics are excellent. Online resources — NCBI, Tree of Life — and primary literature will expand your view. Practice is key: work Punnett squares, solve Hardy–Weinberg problems, and try building small phylogenetic trees from mock sequence data to see the concepts in action.</p>
+            <p>If you want to explore evolution more deeply, there are excellent textbooks and online resources available. Classic textbooks like <strong>Evolution by Futuyma</strong> and <strong>Principles of Population Genetics by Hartl & Clark</strong> provide detailed explanations of core concepts. Online resources such as <strong><a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI</a></strong> for molecular biology data and <strong><a href="http://tolweb.org/tree/" target="_blank">Tree of Life</a></strong> for phylogenetics give interactive ways to explore evolutionary relationships. Primary literature is also valuable for seeing how these ideas are applied in research today.</p>
+
+            <p>Practice is essential for understanding evolutionary concepts. Work through <strong>Punnett squares</strong>, solve <strong>Hardy–Weinberg problems</strong>, and try building small <strong>phylogenetic trees</strong> from mock sequence data or freely available online datasets to see the processes in action.</p>
 
             <ul>
-                <li>Textbooks: 'Evolution' by Futuyma; 'Principles of Population Genetics' by Hartl & Clark.</li>
-                <li>Web: NCBI, Tree of Life, educational tutorials on phylogenetics and population genetics.</li>
-                <li>Activities: hands-on Punnett squares, Hardy–Weinberg calculations, simple phylogenetic reconstructions in MEGA or online tools.</li>
+                <li><strong>Textbooks:</strong>Evolution by Futuyma; Principles of Population Genetics by Hartl & Clark.</li>
+                <li><strong>Web Resources:</strong> <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI</a>; <a href="http://tolweb.org/tree/" target="_blank">Tree of Life</a>; tutorials on <a href="https://www.khanacademy.org/science/biology/heredity" target="_blank">Khan Academy Genetics</a> and <a href="https://www.nature.com/subjects/evolutionary-biology" target="_blank">Nature Evolution Articles</a>.</li>
+                <li><strong>Activities:</strong> hands-on <strong>Punnett squares</strong>, <strong>Hardy–Weinberg calculations</strong>, and simple <strong>phylogenetic reconstructions.</strong></li>
             </ul>
 
             <h3>Final Checkpoint</h3>
