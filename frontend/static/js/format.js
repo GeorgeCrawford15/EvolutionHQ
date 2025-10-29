@@ -171,10 +171,6 @@ function populateMatrix(data) {
         topRow.removeChild(topRow.lastElementChild);
     }
 
-    /*if (tableBody.children.length > 0) {
-        tableBody.removeChild(tableBody.lastElementChild);
-    }*/
-
     while (tableBody.children.length > 0) {
         tableBody.removeChild(tableBody.lastElementChild);
     }

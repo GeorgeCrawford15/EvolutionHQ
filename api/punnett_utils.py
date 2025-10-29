@@ -118,7 +118,7 @@ def simplify_ratio(*numbers):
 
   return simplified_values
 
-def di_genotypic_ratio(offspring_arr): # MAKE THIS FUNCTION MORE EFFICIENT WITH LOOPS AND LISTS
+def di_genotypic_ratio(offspring_arr):
   homo_dom1_2 = 0
   homo_dom1_hetero2 = 0
   homo_dom1_homo_rec2 = 0

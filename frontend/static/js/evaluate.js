@@ -1,6 +1,5 @@
 function compareColumns() {
     const columnData = {};
-    // const columnCount = document.getElementsByClassName('species-name').length;
     const speciesCount = document.querySelectorAll('th').length - 2;
     const speciesNames = [];
     let importingData = false;
@@ -42,7 +41,6 @@ function compareColumns() {
         binaryArr = binaries.map(el => el.innerText.trim());
     }
 
-    const areEmptyBinaries = binaryArr.some(binary => binary === ""); // Remove?
     const areNonBinaries = binaryArr.some(binary => binary !== "1" && binary !== "0" && binary !== "");
     const referenceSpecies = document.getElementById('reference').value;
 
@@ -93,7 +91,7 @@ function compareColumns() {
             } else {
                 binary = document.querySelector('.row' + row + ' td:nth-of-type(' + (col + 2) + ')').innerText.trim();
             }
-            // const binary = document.querySelector('.row' + row + ' td:nth-of-type(' + (col + 2) + ') .binary').value;
+
             const speciesName = speciesNames[col - 1];
             columnData[speciesName].push(binary);
         }
@@ -153,6 +151,7 @@ function computeDistanceMatrix(columnData) {
     return distanceMatrix;
 }
 
+// EVALUATE -- IMPORTANT
 function upgma(distanceMatrix) {
   let clusters = Object.keys(distanceMatrix).map(name => ({
     name: name,

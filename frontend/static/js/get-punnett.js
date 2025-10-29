@@ -32,7 +32,6 @@ const phenotypicRatioMono = document.getElementById('pheno-ratio-mono');
 
 const baseUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
   ? `${window.location.protocol}//${window.location.hostname}:5001`
-  // : 'https://evolutionhq.onrender.com';
   : 'https://api-morning-fog-3066.fly.dev/';
 
 
