@@ -1,0 +1,113 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #4a90e2; /* Friendly blue */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #427fc5;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #4075b2;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Lessons List Section (Card Style) */
+#lessons-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#lessons-list h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #lessons-list {
+        padding: 1.5rem;
+    }
+}
+
+.pdf-container {
+    margin-bottom: 1em;
+}
+
+.pdf-title {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 15px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.pdf-title:hover {
+    background-color: #e0e0e0;
+}
+
+.pdf-title::after {
+    content: '▲';
+    font-size: 0.8rem;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.pdf-title.active::after {
+    transform: rotate(180deg);
+}
+
+.pdf-frame {
+    display: none;
+    width: 100%;
+    height: 700px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}

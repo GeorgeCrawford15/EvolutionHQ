@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premade Lessons | EvolutionHQ</title>
+    <link rel="stylesheet" href="static/css/teacher-lessons.css">
+</head>
+<body>
+    <header>
+        <h1>Premade Lessons for Teachers</h1>
+        <nav>
+            <a href="https://www.evolutionhq.org">Return to Homepage</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lessons-list">
+            <h3>Welcome to the EvolutionHQ lessons dashboard!</h3>
+
+            <h4>Living Environment NYS Regents</h4>
+            <div class="pdf-container">
+                <div class="pdf-title" onclick="togglePDF('pdf1', this)">
+                    Mendelian Genetics: Monohybrid and Dihybrid Crosses
+                </div>
+                <iframe id="pdf1" class="pdf-frame" src="../lessons/EvolutionHQ_Living_Env_Mendelian_Genetics.pdf#zoom=60">
+                    <a href="../lessons/EvolutionHQ_Living_Env_Mendelian_Genetics.pdf#zoom=60">Download PDF</a>
+                </iframe>
+            </div>
+
+            <h4>AP Biology / Dual Enrollment General Biology</h4>
+            <div class="pdf-container">
+                <div class="pdf-title" onclick="togglePDF('pdf2', this)">
+                    Mendelian Genetics: Monohybrid and Dihybrid Crosses, Phenotypic and Genotypic Ratios
+                </div>
+                <iframe id="pdf2" class="pdf-frame" src="../lessons/EvolutionHQ_AP_Bio_Mendelian_Genetics.pdf#zoom=60">
+                    <a href="../lessons/EvolutionHQ_AP_Bio_Mendelian_Genetics.pdf#zoom=60">Download PDF</a>
+                </iframe>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        function togglePDF(id, titleElement) {
+            const frame = document.getElementById(id);
+            const isHidden = window.getComputedStyle(frame).display === "none";
+            
+            frame.style.display = isHidden ? "block" : "none";
+            titleElement.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

@@ -89,6 +89,8 @@ main {
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
+    flex-wrap: wrap; 
+    gap: 30px;   
 }
 
 .widget {
@@ -143,7 +145,7 @@ footer {
         width: 28vw;
     }
     .credit {
-        margin-top: -10px;
+        margin-bottom: 50px;
     }
     .credit p,
     .credit a {
